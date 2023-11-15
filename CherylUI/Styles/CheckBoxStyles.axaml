@@ -1,0 +1,111 @@
+﻿<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Grid
+            Background="{DynamicResource Background}"
+            Height="2400"
+            Width="1080">
+
+
+            <Border
+                Classes="Card"
+                HorizontalAlignment="Center"
+                Margin="50"
+                VerticalAlignment="Center">
+                <StackPanel
+                    HorizontalAlignment="Center"
+                    Orientation="Horizontal"
+                    Spacing="20"
+                    VerticalAlignment="Center">
+
+
+                    <CheckBox />
+                    <TextBlock
+                        Classes="Secondary DemiBold"
+                        Text="Please check this"
+                        VerticalAlignment="Center" />
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Design.PreviewWith>
+
+    <Style Selector="CheckBox">
+
+        <Setter Property="Foreground" Value="{DynamicResource Accent}" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0.5" />
+        <Setter Property="Padding" Value="4,0,0,0" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid ColumnDefinitions="Auto,*">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{DynamicResource ComponentBackground}"
+                        BorderThickness="2"
+                        CornerRadius="5"
+                        Height="26"
+                        Name="border"
+                        VerticalAlignment="Center"
+                        Width="26">
+                        <Border.Transitions>
+                            <Transitions>
+                                <BrushTransition Duration="0:0:0.15" Property="Background" />
+
+                            </Transitions>
+                        </Border.Transitions>
+                        <Panel>
+                            <Path
+                                Data="M 1145.607177734375,430 C1145.607177734375,430 1141.449951171875,435.0772705078125 1141.449951171875,435.0772705078125 1141.449951171875,435.0772705078125 1139.232177734375,433.0999755859375 1139.232177734375,433.0999755859375 1139.232177734375,433.0999755859375 1138,434.5538330078125 1138,434.5538330078125 1138,434.5538330078125 1141.482177734375,438 1141.482177734375,438 1141.482177734375,438 1141.96875,437.9375 1141.96875,437.9375 1141.96875,437.9375 1147,431.34619140625 1147,431.34619140625 1147,431.34619140625 1145.607177734375,430 1145.607177734375,430 z"
+                                Fill="{DynamicResource Background}"
+                                Height="13"
+                                HorizontalAlignment="Center"
+                                Margin="1,2,0,0"
+                                Name="checkMark"
+                                Stretch="Uniform"
+                                VerticalAlignment="Center"
+                                Width="13" />
+
+                        </Panel>
+                    </Border>
+                    <ContentPresenter
+                        Content="{TemplateBinding Content}"
+                        ContentTemplate="{TemplateBinding ContentTemplate}"
+                        Grid.Column="1"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        IsVisible="{TemplateBinding Content,
+                                                    Converter={x:Static ObjectConverters.IsNotNull}}"
+                        Margin="{TemplateBinding Padding}"
+                        Name="PART_ContentPresenter"
+                        RecognizesAccessKey="True"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+
+    <Style Selector="CheckBox:checked /template/ Border#border">
+        <Setter Property="Background" Value="{DynamicResource Accent}" />
+    </Style>
+
+    <Style Selector="CheckBox:pointerover /template/ Border#border">
+        <Setter Property="BorderBrush" Value="{DynamicResource ComponentBackground}" />
+    </Style>
+
+    <Style Selector="CheckBox /template/ Path#checkMark">
+        <Setter Property="IsVisible" Value="False" />
+    </Style>
+    <Style Selector="CheckBox /template/ Rectangle#indeterminateMark">
+        <Setter Property="IsVisible" Value="False" />
+    </Style>
+    <Style Selector="CheckBox:checked /template/ Path#checkMark">
+        <Setter Property="IsVisible" Value="True" />
+    </Style>
+    <Style Selector="CheckBox:indeterminate /template/ Rectangle#indeterminateMark">
+        <Setter Property="IsVisible" Value="True" />
+    </Style>
+    <Style Selector="CheckBox:disabled /template/ Border#border">
+        <Setter Property="Opacity" Value="1" />
+    </Style>
+</Styles>

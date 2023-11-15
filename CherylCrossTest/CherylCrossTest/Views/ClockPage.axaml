@@ -1,0 +1,108 @@
+﻿<UserControl
+    d:DesignHeight="1250"
+    d:DesignWidth="500"
+    mc:Ignorable="d"
+    x:Class="CherylCrossTest.Views.ClockPage"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:controls="clr-namespace:CherylUI.Controls;assembly=CherylUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <controls:SliverPage Header="Alarm">
+        <StackPanel Background="{DynamicResource Background}" Margin="13,20">
+            <Image
+                HorizontalAlignment="Center"
+                Margin="70,00,50,50"
+                Source="../Assets/3d-fluency-clock.png" />
+
+            <Border Classes="Card" Margin="3,7">
+                <DockPanel>
+                    <ToggleButton
+                        Classes="Switch"
+                        DockPanel.Dock="Right"
+                        IsChecked="True"
+                        Margin="3"
+                        VerticalAlignment="Center" />
+                    <TextBlock
+                        Classes="Secondary"
+                        DockPanel.Dock="Bottom"
+                        FontSize="14"
+                        Margin="5,3"
+                        Text="Good morning, Morning to Friday" />
+                    <StackPanel Margin="5,3" Orientation="Horizontal">
+                        <TextBlock
+                            Classes="DemiBold"
+                            FontSize="28"
+                            Text="7:30" />
+                        <TextBlock
+                            Classes="DemiBold"
+                            FontSize="18"
+                            Margin="5,0,0,4"
+                            Text="AM"
+                            VerticalAlignment="Bottom" />
+                    </StackPanel>
+                </DockPanel>
+            </Border>
+
+            <Border Classes="Card" Margin="3,7">
+                <DockPanel>
+                    <ToggleButton
+                        Classes="Switch"
+                        DockPanel.Dock="Right"
+                        IsChecked="False"
+                        Margin="3"
+                        VerticalAlignment="Center" />
+                    <TextBlock
+                        Classes="Secondary"
+                        DockPanel.Dock="Bottom"
+                        FontSize="14"
+                        Margin="5,3"
+                        Text="Good morning, Morning to Friday" />
+                    <StackPanel Margin="5,3" Orientation="Horizontal">
+                        <TextBlock
+                            Classes="DemiBold"
+                            FontSize="28"
+                            Text="7:45" />
+                        <TextBlock
+                            Classes="DemiBold"
+                            FontSize="18"
+                            Margin="5,0,0,4"
+                            Text="AM"
+                            VerticalAlignment="Bottom" />
+                    </StackPanel>
+                </DockPanel>
+            </Border>
+
+            <Border Classes="Card" Margin="3,7">
+                <DockPanel>
+                    <ToggleButton
+                        Classes="Switch"
+                        DockPanel.Dock="Right"
+                        IsChecked="True"
+                        Margin="3"
+                        VerticalAlignment="Center" />
+                    <TextBlock
+                        Classes="Secondary"
+                        DockPanel.Dock="Bottom"
+                        FontSize="14"
+                        Margin="5,3"
+                        Text="Running, Sat Sun" />
+                    <StackPanel Margin="5,3" Orientation="Horizontal">
+                        <TextBlock
+                            Classes="DemiBold"
+                            FontSize="28"
+                            Text="8:00" />
+                        <TextBlock
+                            Classes="DemiBold"
+                            FontSize="18"
+                            Margin="5,0,0,4"
+                            Text="PM"
+                            VerticalAlignment="Bottom" />
+                    </StackPanel>
+                </DockPanel>
+            </Border>
+        </StackPanel>
+    </controls:SliverPage>
+
+</UserControl>

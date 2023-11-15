@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Color x:Key="Foreground">#fafbfc</Color>
+    <Color x:Key="ContraryForeground">#e5e5e5</Color>
+    <Color x:Key="CardBackground">#1d1f21</Color>
+    <Color x:Key="DialogBackground">#252729</Color>
+    <Color x:Key="Background">#252729</Color>
+    <Color x:Key="GridDialogBackground">#55ffffff</Color>
+
+
+    <Color x:Key="Accent">#317AF7</Color>
+    <Color x:Key="ContraryAccent">#317AF7</Color>
+    <Color x:Key="SelectedAccent">#317AF7</Color>
+    <Color x:Key="LightAccent">#250A59F7</Color>
+    <Color x:Key="ComponentBackground">#44ffffff</Color>
+    <Color x:Key="Separator">#33ffffff</Color>
+    <Color x:Key="ListSeparator">#11dddddd</Color>
+    <Color x:Key="TappingBackground">#19ffffff</Color>
+
+    <Color x:Key="PrimaryText">#e7ffffff</Color>
+    <Color x:Key="SecondaryText">#aeffffff</Color>
+
+</ResourceDictionary>

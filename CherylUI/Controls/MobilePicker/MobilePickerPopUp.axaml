@@ -1,0 +1,48 @@
+﻿<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="CherylUI.Controls.MobilePicker.MobilePickerPopUp"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mobilePicker="clr-namespace:CherylUI.Controls.MobilePicker"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.DataContext>
+        <mobilePicker:MobilePickerPopUpVM />
+    </UserControl.DataContext>
+    <Border
+        HorizontalAlignment="Center"
+        Name="rootBorder"
+        VerticalAlignment="Center"
+        Width="300">
+        <StackPanel>
+            <TextBlock
+                FontWeight="Bold"
+                Margin="8,5"
+                Text="{Binding Title}" />
+
+            <TextBlock
+                Classes="Secondary"
+                FontSize="13"
+                Margin="9,2"
+                Text="{Binding SubTitle}"
+                TextWrapping="Wrap" />
+
+
+            <Grid Margin="10,20,10,18" VerticalAlignment="Center">
+                <ListBox
+                    ItemsSource="{Binding Items}"
+                    MaxHeight="170"
+                    MinHeight="120"
+                    SelectedItem="{Binding SelectedItem}"
+                    VerticalAlignment="Center" />
+            </Grid>
+
+            <Button Classes="Small" Click="DoneClick">
+                <TextBlock Text="Done" />
+            </Button>
+
+        </StackPanel>
+    </Border>
+</UserControl>

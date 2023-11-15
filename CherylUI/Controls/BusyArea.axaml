@@ -1,0 +1,48 @@
+﻿<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="CherylUI.Controls.BusyArea"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:suki="clr-namespace:CherylUI.Controls"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Styles>
+        <Style Selector="suki|BusyArea">
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Grid>
+                        <ContentControl Content="{TemplateBinding Content}" />
+
+                        <suki:Loading
+                            HorizontalAlignment="Center"
+                            IsHitTestVisible="False"
+                            Name="LoadingBusyArea"
+                            VerticalAlignment="Center" />
+
+
+                    </Grid>
+                </ControlTemplate>
+            </Setter>
+        </Style>
+
+
+        <Style Selector="suki|BusyArea[IsBusy=True] suki|Loading#LoadingBusyArea">
+            <Setter Property="Opacity" Value="1" />
+        </Style>
+
+        <Style Selector="suki|BusyArea[IsBusy=False] suki|Loading#LoadingBusyArea">
+            <Setter Property="Opacity" Value="0" />
+        </Style>
+
+        <Style Selector="suki|BusyArea[IsBusy=True] ContentControl">
+            <Setter Property="Opacity" Value="0.1" />
+        </Style>
+
+        <Style Selector="suki|BusyArea[IsBusy=False] ContentControl">
+            <Setter Property="Opacity" Value="1" />
+        </Style>
+
+    </UserControl.Styles>
+</UserControl>

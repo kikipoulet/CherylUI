@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="CherylCrossTest/CherylCrossTest/App.axaml" value="CherylCrossTest/CherylCrossTest.Browser/CherylCrossTest.Browser.csproj" />
+        <entry key="CherylCrossTest/CherylCrossTest/Views/ClockPage.axaml" value="CherylCrossTest/CherylCrossTest.Desktop/CherylCrossTest.Desktop.csproj" />
+        <entry key="CherylCrossTest/CherylCrossTest/Views/LoginPage.axaml" value="CherylCrossTest/CherylCrossTest.Desktop/CherylCrossTest.Desktop.csproj" />
+        <entry key="CherylCrossTest/CherylCrossTest/Views/MainView.axaml" value="CherylCrossTest/CherylCrossTest.Desktop/CherylCrossTest.Desktop.csproj" />
+        <entry key="CherylCrossTest/CherylCrossTest/Views/MainWindow.axaml" value="CherylCrossTest/CherylCrossTest.Browser/CherylCrossTest.Browser.csproj" />
+        <entry key="CherylCrossTest/CherylCrossTest/Views/SettingsPage.axaml" value="CherylCrossTest/CherylCrossTest.Desktop/CherylCrossTest.Desktop.csproj" />
+        <entry key="CherylTest/App.axaml" value="CherylTest/CherylTest.csproj" />
+        <entry key="CherylTest/ButtonStyles.axaml" value="CherylTest/CherylTest.csproj" />
+        <entry key="CherylTest/CardStyles.axaml" value="CherylTest/CherylTest.csproj" />
+        <entry key="CherylTest/CheckBoxStyles.axaml" value="CherylTest/CherylTest.csproj" />
+        <entry key="CherylTest/LightTheme.axaml" value="CherylTest/CherylTest.csproj" />
+        <entry key="CherylTest/MainWindow.axaml" value="CherylTest/CherylTest.csproj" />
+        <entry key="CherylTest/ProgressbarStyles.axaml" value="CherylTest/CherylTest.csproj" />
+        <entry key="CherylTest/RadioButtonStyles.axaml" value="CherylTest/CherylTest.csproj" />
+        <entry key="CherylTest/TextStyles.axaml" value="CherylTest/CherylTest.csproj" />
+        <entry key="CherylTest/ToggleButtonStyles.axaml" value="CherylTest/CherylTest.csproj" />
+        <entry key="CherylUI/ColorThemes/DarkTheme.axaml" value="CherylCrossTest/CherylCrossTest.Browser/CherylCrossTest.Browser.csproj" />
+        <entry key="CherylUI/ColorThemes/LightTheme.axaml" value="CherylCrossTest/CherylCrossTest.Browser/CherylCrossTest.Browser.csproj" />
+        <entry key="CherylUI/Controls/BusyArea.axaml" value="CherylCrossTest/CherylCrossTest.Browser/CherylCrossTest.Browser.csproj" />
+        <entry key="CherylUI/Controls/GroupBox.axaml" value="CherylCrossTest/CherylCrossTest.Browser/CherylCrossTest.Browser.csproj" />
+        <entry key="CherylUI/Controls/HorizontalSeparator.axaml" value="CherylCrossTest/CherylCrossTest.Browser/CherylCrossTest.Browser.csproj" />
+        <entry key="CherylUI/Controls/InteractiveContainer.axaml" value="CherylCrossTest/CherylCrossTest.Browser/CherylCrossTest.Browser.csproj" />
+        <entry key="CherylUI/Controls/Loading.axaml" value="CherylCrossTest/CherylCrossTest.Browser/CherylCrossTest.Browser.csproj" />
+        <entry key="CherylUI/Controls/MobileNavigation.axaml" value="CherylCrossTest/CherylCrossTest.Browser/CherylCrossTest.Browser.csproj" />
+        <entry key="CherylUI/Controls/MobileNumberPicker/MobileNumberPicker.axaml" value="CherylCrossTest/CherylCrossTest.Desktop/CherylCrossTest.Desktop.csproj" />
+        <entry key="CherylUI/Controls/MobileNumberPicker/MobileNumberPickerPopup.axaml" value="CherylCrossTest/CherylCrossTest.Desktop/CherylCrossTest.Desktop.csproj" />
+        <entry key="CherylUI/Controls/MobilePicker/MobilePicker.axaml" value="CherylCrossTest/CherylCrossTest.Browser/CherylCrossTest.Browser.csproj" />
+        <entry key="CherylUI/Controls/MobilePicker/MobilePickerPopUp.axaml" value="CherylCrossTest/CherylCrossTest.Desktop/CherylCrossTest.Desktop.csproj" />
+        <entry key="CherylUI/Controls/SliverPage.axaml" value="CherylCrossTest/CherylCrossTest.Browser/CherylCrossTest.Browser.csproj" />
+        <entry key="CherylUI/HorizontalSeparator.axaml" value="CherylCrossTest/CherylCrossTest.Browser/CherylCrossTest.Browser.csproj" />
+        <entry key="CherylUI/Icons.axaml" value="CherylCrossTest/CherylCrossTest.Browser/CherylCrossTest.Browser.csproj" />
+        <entry key="CherylUI/Index.axaml" value="CherylTest/CherylTest.csproj" />
+        <entry key="CherylUI/Styles/ButtonStyles.axaml" value="CherylCrossTest/CherylCrossTest.Desktop/CherylCrossTest.Desktop.csproj" />
+        <entry key="CherylUI/Styles/CardStyles.axaml" value="CherylCrossTest/CherylCrossTest.Browser/CherylCrossTest.Browser.csproj" />
+        <entry key="CherylUI/Styles/CheckBoxStyles.axaml" value="CherylCrossTest/CherylCrossTest.Desktop/CherylCrossTest.Desktop.csproj" />
+        <entry key="CherylUI/Styles/ListboxStyles.axaml" value="CherylCrossTest/CherylCrossTest.Desktop/CherylCrossTest.Desktop.csproj" />
+        <entry key="CherylUI/Styles/ProgressbarStyles.axaml" value="CherylCrossTest/CherylCrossTest.Desktop/CherylCrossTest.Desktop.csproj" />
+        <entry key="CherylUI/Styles/RadioButtonStyles.axaml" value="CherylCrossTest/CherylCrossTest.Desktop/CherylCrossTest.Desktop.csproj" />
+        <entry key="CherylUI/Styles/SliderStyles.axaml" value="CherylCrossTest/CherylCrossTest.Desktop/CherylCrossTest.Desktop.csproj" />
+        <entry key="CherylUI/Styles/TextBoxStyles.axaml" value="CherylCrossTest/CherylCrossTest.Desktop/CherylCrossTest.Desktop.csproj" />
+        <entry key="CherylUI/Styles/TextEraserButton.axaml" value="CherylCrossTest/CherylCrossTest.Desktop/CherylCrossTest.Desktop.csproj" />
+        <entry key="CherylUI/Styles/TextStyles.axaml" value="CherylCrossTest/CherylCrossTest.Browser/CherylCrossTest.Browser.csproj" />
+        <entry key="CherylUI/Styles/ToggleButtonStyles.axaml" value="CherylCrossTest/CherylCrossTest.Desktop/CherylCrossTest.Desktop.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

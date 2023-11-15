@@ -1,0 +1,164 @@
+﻿<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <Design.PreviewWith>
+        <Grid Height="2400" Width="1080">
+
+
+            <StackPanel
+                HorizontalAlignment="Center"
+                Spacing="20"
+                VerticalAlignment="Center">
+                <Button>
+                    <TextBlock Text="Normal" />
+                </Button>
+
+                <Button Classes="Small" HorizontalAlignment="Center">
+                    <TextBlock Text="Small" />
+                </Button>
+
+                <Button Classes="Secondary Small" HorizontalAlignment="Center">
+                    <TextBlock Text="Secondary" />
+                </Button>
+
+                <Button Classes="Text Small" HorizontalAlignment="Center">
+                    <TextBlock Text="Text" />
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Design.PreviewWith>
+
+
+
+    <Style Selector="Button">
+
+        <Setter Property="BorderThickness" Value="0" />
+
+        <Setter Property="Padding" Value="30,12" />
+        <Setter Property="CornerRadius" Value="100" />
+
+        <Setter Property="Background" Value="{DynamicResource Accent}" />
+
+        <Setter Property="Template">
+            <ControlTemplate>
+
+                <Border
+                    BorderBrush="Transparent"
+                    BorderThickness="2"
+                    CornerRadius="{TemplateBinding CornerRadius}"
+                    Name="GlobalBorder"
+                    Padding="2">
+                    <Border.Transitions>
+                        <Transitions>
+                            <BrushTransition Duration="0:0:0.2" Property="BorderBrush" />
+                        </Transitions>
+                    </Border.Transitions>
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}"
+                        Name="InsideBorder"
+                        Padding="{TemplateBinding Padding}"
+                        TextElement.Foreground="{TemplateBinding Foreground}">
+                        <Border.Transitions>
+                            <Transitions>
+                                <BrushTransition Duration="0:0:0.2" Property="Background" />
+                            </Transitions>
+                        </Border.Transitions>
+                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+
+                            <ContentPresenter
+                                Content="{TemplateBinding Content}"
+                                HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                RecognizesAccessKey="True"
+                                VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        </StackPanel>
+
+                    </Border>
+
+                </Border>
+
+
+
+            </ControlTemplate>
+        </Setter>
+
+    </Style>
+
+    <Style Selector="Button:focus Border#GlobalBorder">
+        <Setter Property="BorderBrush" Value="{DynamicResource Accent}" />
+    </Style>
+
+    <Style Selector="Button:pressed">
+        <Setter Property="Background" Value="{DynamicResource ContraryAccent}" />
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <ScaleTransform ScaleX="1.01" ScaleY="1.01" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style Selector="Button TextBlock">
+        <Setter Property="Foreground" Value="{DynamicResource ContraryForeground}" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="Margin" Value="0,1,0,0" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+
+    <Style Selector="Button.Small TextBlock">
+        <Setter Property="FontSize" Value="16" />
+    </Style>
+
+    <Style Selector="Button.Small">
+        <Setter Property="Padding" Value="22,10" />
+    </Style>
+
+    <Style Selector="Button.Large TextBlock">
+        <Setter Property="FontSize" Value="23" />
+    </Style>
+
+    <Style Selector="Button.Large">
+        <Setter Property="Padding" Value="40,15" />
+    </Style>
+
+
+    <Style Selector="Button.Secondary Border#InsideBorder">
+        <Setter Property="Background" Value="{DynamicResource LightAccent}" />
+    </Style>
+
+    <Style Selector="Button.Secondary:pressed Border#InsideBorder">
+        <Setter Property="Background" Value="{DynamicResource TappingBackground}" />
+    </Style>
+
+    <Style Selector="Button.Secondary TextBlock">
+        <Setter Property="Foreground" Value="{DynamicResource Accent}" />
+
+    </Style>
+
+    <Style Selector="Button.Text Border#InsideBorder">
+        <Setter Property="Background" Value="Transparent" />
+    </Style>
+
+    <Style Selector="Button.Text:pressed Border#InsideBorder">
+        <Setter Property="Background" Value="{DynamicResource TappingBackground}" />
+    </Style>
+
+    <Style Selector="Button.Text TextBlock">
+        <Setter Property="Foreground" Value="{DynamicResource Accent}" />
+
+    </Style>
+
+    <Style Selector="Button.Void Border#InsideBorder">
+        <Setter Property="Background" Value="Transparent" />
+    </Style>
+
+    <Style Selector="Button.Void:pressed Border#InsideBorder">
+        <Setter Property="Background" Value="{DynamicResource TappingBackground}" />
+    </Style>
+
+    <Style Selector="Button.Void:focus Border#GlobalBorder">
+        <Setter Property="BorderBrush" Value="Transparent" />
+    </Style>
+</Styles>

@@ -1,0 +1,76 @@
+﻿<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="CherylUI.Controls.MobileNumberPicker.MobileNumberPickerPopup"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:cherylUi="clr-namespace:CherylUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Border Height="215" Width="350">
+        <Grid>
+
+            <Grid
+                Background="{DynamicResource DialogBackground}"
+                Height="110"
+                HorizontalAlignment="Center"
+                Margin="20"
+                PointerMoved="PointerMoved"
+                PointerPressed="PointerPressed"
+                PointerReleased="PointerReleased"
+                VerticalAlignment="Top"
+                Width="300">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                    <TextBlock
+                        FontSize="10"
+                        FontWeight="Thin"
+                        HorizontalAlignment="Center"
+                        Name="CurrentValueTextMinus2"
+                        Text="-2"
+                        VerticalAlignment="Center" />
+                    <TextBlock
+                        FontSize="15"
+                        HorizontalAlignment="Center"
+                        Name="CurrentValueTextMinus1"
+                        Text="-1"
+                        VerticalAlignment="Center" />
+                    <TextBlock
+                        FontSize="24"
+                        FontWeight="Bold"
+                        Foreground="{DynamicResource Accent}"
+                        HorizontalAlignment="Center"
+                        Margin="4"
+                        Name="CurrentValueText"
+                        Text="0"
+                        VerticalAlignment="Center" />
+                    <TextBlock
+                        FontSize="15"
+                        HorizontalAlignment="Center"
+                        Name="CurrentValueTextPlus1"
+                        Text="1"
+                        VerticalAlignment="Center" />
+                    <TextBlock
+                        FontSize="10"
+                        FontWeight="Thin"
+                        HorizontalAlignment="Center"
+                        Name="CurrentValueTextPlus2"
+                        Text="2"
+                        VerticalAlignment="Center" />
+                </StackPanel>
+                <cherylUi:HorizontalSeparator Margin="0,35,0,0" Width="80" />
+                <cherylUi:HorizontalSeparator Margin="0,0,0,35" Width="80" />
+            </Grid>
+
+            <Button
+                Classes="Small"
+                Click="DoneClick"
+                VerticalAlignment="Bottom">
+                <TextBlock FontWeight="Bold" Text="Done" />
+            </Button>
+
+
+        </Grid>
+    </Border>
+</UserControl>

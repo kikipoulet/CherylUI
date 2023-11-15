@@ -1,0 +1,12 @@
+<Application
+    RequestedThemeVariant="Default"
+    x:Class="CherylCrossTest.App"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:local="using:CherylCrossTest"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--  "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options.  -->
+
+    <Application.Styles>
+        <StyleInclude Source="avares://CherylUI/Index.axaml" />
+    </Application.Styles>
+</Application>

@@ -1,0 +1,24 @@
+﻿<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="CherylUI.HorizontalSeparator"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:controls="clr-namespace:CherylUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Styles>
+        <Style Selector="controls|HorizontalSeparator">
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Border
+                        Background="{DynamicResource ListSeparator}"
+                        BorderThickness="0"
+                        DockPanel.Dock="Bottom"
+                        Height="1" />
+                </ControlTemplate>
+            </Setter>
+        </Style>
+    </UserControl.Styles>
+</UserControl>

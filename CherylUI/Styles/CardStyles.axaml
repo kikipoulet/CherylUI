@@ -1,0 +1,45 @@
+﻿<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Design.PreviewWith>
+        <Grid
+            Background="{DynamicResource Background}"
+            Height="2400"
+            Width="1080">
+
+
+            <Border
+                Classes="Card"
+                HorizontalAlignment="Center"
+                Margin="50"
+                VerticalAlignment="Center">
+                <StackPanel
+                    HorizontalAlignment="Center"
+                    Spacing="20"
+                    VerticalAlignment="Center">
+
+
+                    <Button Classes="Small" HorizontalAlignment="Center">
+                        <TextBlock Text="Small" />
+                    </Button>
+
+                    <Button Classes="Secondary Small" HorizontalAlignment="Center">
+                        <TextBlock Text="Secondary" />
+                    </Button>
+
+                    <Button Classes="Text Small" HorizontalAlignment="Center">
+                        <TextBlock Text="Text" />
+                    </Button>
+                    <Button Classes="Small">
+                        <TextBlock Text="Normal" />
+                    </Button>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Design.PreviewWith>
+
+    <Style Selector="Border.Card">
+        <Setter Property="Background" Value="{DynamicResource CardBackground}" />
+        <Setter Property="CornerRadius" Value="20" />
+        <Setter Property="Padding" Value="10,10" />
+    </Style>
+</Styles>

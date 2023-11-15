@@ -1,0 +1,37 @@
+<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="CherylCrossTest.Views.MainView"
+    x:DataType="vm:MainViewModel"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:cherylUi="clr-namespace:CherylUI;assembly=CherylUI"
+    xmlns:controls="clr-namespace:CherylUI.Controls;assembly=CherylUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mobilePicker="clr-namespace:CherylUI.Controls.MobilePicker;assembly=CherylUI"
+    xmlns:objectModel="clr-namespace:System.Collections.ObjectModel;assembly=System.ObjectModel"
+    xmlns:system="clr-namespace:System;assembly=System.Runtime"
+    xmlns:views="clr-namespace:CherylCrossTest.Views"
+    xmlns:vm="clr-namespace:CherylCrossTest.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <controls:InteractiveContainer>
+        <StackPanel
+            HorizontalAlignment="Center"
+            Spacing="20"
+            VerticalAlignment="Center">
+
+            <Button Click="GoToSettings">
+                <TextBlock Text="Settings Page" />
+            </Button>
+
+            <Button Click="GoToAlarm">
+                <TextBlock Text="Alarm Page" />
+            </Button>
+
+            <Button Click="GoToLoginPage">
+                <TextBlock Text="Login Page" />
+            </Button>
+        </StackPanel>
+    </controls:InteractiveContainer>
+</UserControl>

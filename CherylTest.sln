@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34302.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CherylCrossTest", "CherylCrossTest\CherylCrossTest\CherylCrossTest.csproj", "{9D13B78D-1017-4690-8FEA-E68E596E5336}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CherylCrossTest.Android", "CherylCrossTest\CherylCrossTest.Android\CherylCrossTest.Android.csproj", "{1142D87E-1F80-4F6A-9ADD-652DAABE10AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CherylCrossTest.Desktop", "CherylCrossTest\CherylCrossTest.Desktop\CherylCrossTest.Desktop.csproj", "{A0360DB3-1279-4529-B3F1-DA43FF22D147}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CherylCrossTest.Browser", "CherylCrossTest\CherylCrossTest.Browser\CherylCrossTest.Browser.csproj", "{9751DAA5-C4F7-454D-82D8-C9E9CB86C6AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CherylUI", "CherylUI\CherylUI.csproj", "{2C8AEF22-E5EF-46B8-A6C9-0E0FC6DCA611}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D13B78D-1017-4690-8FEA-E68E596E5336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D13B78D-1017-4690-8FEA-E68E596E5336}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D13B78D-1017-4690-8FEA-E68E596E5336}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D13B78D-1017-4690-8FEA-E68E596E5336}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1142D87E-1F80-4F6A-9ADD-652DAABE10AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1142D87E-1F80-4F6A-9ADD-652DAABE10AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1142D87E-1F80-4F6A-9ADD-652DAABE10AF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1142D87E-1F80-4F6A-9ADD-652DAABE10AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1142D87E-1F80-4F6A-9ADD-652DAABE10AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0360DB3-1279-4529-B3F1-DA43FF22D147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0360DB3-1279-4529-B3F1-DA43FF22D147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0360DB3-1279-4529-B3F1-DA43FF22D147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0360DB3-1279-4529-B3F1-DA43FF22D147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9751DAA5-C4F7-454D-82D8-C9E9CB86C6AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9751DAA5-C4F7-454D-82D8-C9E9CB86C6AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9751DAA5-C4F7-454D-82D8-C9E9CB86C6AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9751DAA5-C4F7-454D-82D8-C9E9CB86C6AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C8AEF22-E5EF-46B8-A6C9-0E0FC6DCA611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C8AEF22-E5EF-46B8-A6C9-0E0FC6DCA611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C8AEF22-E5EF-46B8-A6C9-0E0FC6DCA611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C8AEF22-E5EF-46B8-A6C9-0E0FC6DCA611}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

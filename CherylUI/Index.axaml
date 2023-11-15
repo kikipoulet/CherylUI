@@ -1,0 +1,32 @@
+﻿<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Styles.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+
+                <ResourceInclude Source="ColorThemes/LightTheme.axaml" x:Key="Light" />
+                <ResourceInclude Source="ColorThemes/DarkTheme.axaml" x:Key="Dark" />
+
+
+            </ResourceDictionary.ThemeDictionaries>
+            <ResourceDictionary.MergedDictionaries>
+
+                <ResourceInclude Source="Icons.axaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+
+            <FontFamily x:Key="HarmonyFont">avares://CherylUI/CustomFont#Nunito</FontFamily>
+        </ResourceDictionary>
+    </Styles.Resources>
+    <SimpleTheme />
+
+    <StyleInclude Source="Styles/TextStyles.axaml" />
+    <StyleInclude Source="Styles/ButtonStyles.axaml" />
+    <StyleInclude Source="Styles/CardStyles.axaml" />
+    <StyleInclude Source="Styles/ProgressbarStyles.axaml" />
+    <StyleInclude Source="Styles/CheckboxStyles.axaml" />
+    <StyleInclude Source="Styles/RadioButtonStyles.axaml" />
+    <StyleInclude Source="Styles/ToggleButtonStyles.axaml" />
+    <StyleInclude Source="Styles/ListboxStyles.axaml" />
+    <StyleInclude Source="Styles/SliderStyles.axaml" />
+    <StyleInclude Source="Styles/TextBoxStyles.axaml" />
+</Styles>

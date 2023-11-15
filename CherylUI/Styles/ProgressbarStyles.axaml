@@ -1,0 +1,69 @@
+﻿<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Grid
+            Background="{DynamicResource Background}"
+            Height="2400"
+            Width="1080">
+
+
+            <Border
+                Classes="Card"
+                HorizontalAlignment="Center"
+                Margin="50"
+                VerticalAlignment="Center">
+                <ProgressBar Margin="20" Value="50" />
+            </Border>
+        </Grid>
+    </Design.PreviewWith>
+
+    <Style Selector="ProgressBar">
+
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="Background" Value="{DynamicResource ComponentBackground}" />
+        <Setter Property="Foreground" Value="{DynamicResource Accent}" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid>
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}"
+                        Height="5">
+                        <Panel>
+                            <Border
+                                Background="{TemplateBinding Foreground}"
+                                CornerRadius="{TemplateBinding CornerRadius}"
+                                Height="8"
+                                IsVisible="{Binding !IsIndeterminate, RelativeSource={RelativeSource TemplatedParent}}"
+                                Name="PART_Indicator">
+
+                                <Border.Transitions>
+                                    <Transitions>
+                                        <DoubleTransition
+                                            Duration="0:0:0.8"
+                                            Easing="CircularEaseOut"
+                                            Property="Width" />
+                                    </Transitions>
+                                </Border.Transitions>
+                            </Border>
+                            <Border
+                                Background="{TemplateBinding Foreground}"
+                                CornerRadius="{TemplateBinding CornerRadius}"
+                                Height="8"
+                                IsVisible="{Binding IsIndeterminate, RelativeSource={RelativeSource TemplatedParent}}"
+                                Name="PART_IndeterminateIndicator" />
+                        </Panel>
+                    </Border>
+                    <LayoutTransformControl
+                        HorizontalAlignment="Center"
+                        IsVisible="{Binding ShowProgressText, RelativeSource={RelativeSource TemplatedParent}}"
+                        Name="PART_LayoutTransformControl"
+                        VerticalAlignment="Center">
+                        <TextBlock Foreground="{DynamicResource ThemeForegroundBrush}" Text="{Binding Value, RelativeSource={RelativeSource TemplatedParent}, StringFormat={}{0:0}%}" />
+                    </LayoutTransformControl>
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

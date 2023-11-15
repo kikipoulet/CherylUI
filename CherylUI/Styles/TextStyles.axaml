@@ -1,0 +1,23 @@
+﻿<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <!--  Add Controls for Previewer Here  -->
+        </Border>
+    </Design.PreviewWith>
+
+    <Style Selector="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource HarmonyFont}" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryText}" />
+        <Setter Property="FontWeight" Value="Medium" />
+    </Style>
+
+    <Style Selector="TextBlock.Secondary">
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="Foreground" Value="{DynamicResource SecondaryText}" />
+    </Style>
+
+    <Style Selector="TextBlock.DemiBold">
+        <Setter Property="FontWeight" Value="DemiBold" />
+    </Style>
+</Styles>

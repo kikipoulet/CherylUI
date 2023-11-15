@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Avalonia.Themes.Simple" Version="11.0.5" />
+      <PackageReference Include="ReactiveUI" Version="18.3.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AvaloniaResource Include="CustomFont\HarmonyOS_Sans-Black.ttf" />
+      <AvaloniaResource Include="CustomFont\HarmonyOS_Sans-Bold.ttf" />
+      <AvaloniaResource Include="CustomFont\HarmonyOS_Sans-Light.ttf" />
+      <AvaloniaResource Include="CustomFont\HarmonyOS_Sans-Medium.ttf" />
+      <AvaloniaResource Include="CustomFont\HarmonyOS_Sans-Regular.ttf" />
+      <AvaloniaResource Include="CustomFont\HarmonyOS_Sans-Thin.ttf" />
+      <None Remove="CustomFont\Nunito-Black.ttf" />
+      <AvaloniaResource Include="CustomFont\Nunito-Black.ttf" />
+      <None Remove="CustomFont\Nunito-BlackItalic.ttf" />
+      <AvaloniaResource Include="CustomFont\Nunito-BlackItalic.ttf" />
+      <None Remove="CustomFont\Nunito-Bold.ttf" />
+      <AvaloniaResource Include="CustomFont\Nunito-Bold.ttf" />
+      <None Remove="CustomFont\Nunito-BoldItalic.ttf" />
+      <AvaloniaResource Include="CustomFont\Nunito-BoldItalic.ttf" />
+      <None Remove="CustomFont\Nunito-ExtraBold.ttf" />
+      <AvaloniaResource Include="CustomFont\Nunito-ExtraBold.ttf" />
+      <None Remove="CustomFont\Nunito-ExtraBoldItalic.ttf" />
+      <AvaloniaResource Include="CustomFont\Nunito-ExtraBoldItalic.ttf" />
+      <None Remove="CustomFont\Nunito-ExtraLight.ttf" />
+      <AvaloniaResource Include="CustomFont\Nunito-ExtraLight.ttf" />
+      <None Remove="CustomFont\Nunito-ExtraLightItalic.ttf" />
+      <AvaloniaResource Include="CustomFont\Nunito-ExtraLightItalic.ttf" />
+      <None Remove="CustomFont\Nunito-Italic.ttf" />
+      <AvaloniaResource Include="CustomFont\Nunito-Italic.ttf" />
+      <None Remove="CustomFont\Nunito-Light.ttf" />
+      <AvaloniaResource Include="CustomFont\Nunito-Light.ttf" />
+      <None Remove="CustomFont\Nunito-LightItalic.ttf" />
+      <AvaloniaResource Include="CustomFont\Nunito-LightItalic.ttf" />
+      <None Remove="CustomFont\Nunito-Medium.ttf" />
+      <AvaloniaResource Include="CustomFont\Nunito-Medium.ttf" />
+      <None Remove="CustomFont\Nunito-MediumItalic.ttf" />
+      <AvaloniaResource Include="CustomFont\Nunito-MediumItalic.ttf" />
+      <None Remove="CustomFont\Nunito-Regular.ttf" />
+      <AvaloniaResource Include="CustomFont\Nunito-Regular.ttf" />
+      <None Remove="CustomFont\Nunito-SemiBold.ttf" />
+      <AvaloniaResource Include="CustomFont\Nunito-SemiBold.ttf" />
+      <None Remove="CustomFont\Nunito-SemiBoldItalic.ttf" />
+      <AvaloniaResource Include="CustomFont\Nunito-SemiBoldItalic.ttf" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Controls\HorizontalSeparator.axaml.cs">
+        <DependentUpon>HorizontalSeparator.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
+
+</Project>

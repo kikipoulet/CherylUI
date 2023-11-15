@@ -1,0 +1,20 @@
+﻿<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="CherylUI.Controls.MobileNavigation"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:controls="clr-namespace:CherylUI.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Styles>
+        <Style Selector="controls|MobileNavigation">
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <ContentControl Content="{TemplateBinding Content}" />
+                </ControlTemplate>
+            </Setter>
+        </Style>
+    </UserControl.Styles>
+</UserControl>
