@@ -1,0 +1,36 @@
+﻿<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="CherylUI.Controls.FormFields.FormFieldPicker"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:formFields="clr-namespace:CherylUI.Controls.FormFields"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mobilePicker="clr-namespace:CherylUI.Controls.MobilePicker"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Styles>
+        <Style Selector="formFields|FormFieldPicker">
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Grid Height="52">
+                        <TextBlock
+                            FontWeight="DemiBold"
+                            HorizontalAlignment="Left"
+                            Text="{TemplateBinding Title}"
+                            VerticalAlignment="Center" />
+                        <mobilePicker:MobilePicker
+                            HorizontalAlignment="Right"
+                            Items="{TemplateBinding Items}"
+                            Margin="0,0,-30,0"
+                            SelectedItem="{TemplateBinding SelectedItem,
+                                                           Mode=TwoWay}"
+                            SubTitle="{TemplateBinding DialogSubTitle}"
+                            Title="{TemplateBinding DialogTitle}"
+                            VerticalAlignment="Center" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter>
+        </Style>
+    </UserControl.Styles>
+</UserControl>

@@ -1,0 +1,52 @@
+﻿<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="CherylUI.Controls.FormFields.FormFieldAction"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:formFields="clr-namespace:CherylUI.Controls.FormFields"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Styles>
+        <Style Selector="formFields|FormFieldAction">
+            <Setter Property="Template">
+                <ControlTemplate>
+
+                    <Button
+                        Classes="Void"
+                        Command="{TemplateBinding Command}"
+                        CommandParameter="{TemplateBinding CommandParameter}"
+                        CornerRadius="8"
+                        HorizontalAlignment="Stretch"
+                        HorizontalContentAlignment="Stretch"
+                        Margin="-4,-2"
+                        Padding="0">
+                        <Grid Height="52" HorizontalAlignment="Stretch">
+                            <PathIcon
+                                Data="{StaticResource chevron_right_regular}"
+                                Foreground="{DynamicResource SecondaryText}"
+                                Height="13"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                Width="13" />
+                            <TextBlock
+                                FontWeight="DemiBold"
+                                Foreground="{DynamicResource Foreground}"
+                                HorizontalAlignment="Left"
+                                Text="{TemplateBinding Title}"
+                                VerticalAlignment="Center" />
+
+
+
+                        </Grid>
+                    </Button>
+
+                </ControlTemplate>
+            </Setter>
+        </Style>
+
+
+
+    </UserControl.Styles>
+</UserControl>

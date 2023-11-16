@@ -1,0 +1,35 @@
+﻿<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="CherylUI.Controls.FormFields.FormFieldNumberPicker"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:formFields="clr-namespace:CherylUI.Controls.FormFields"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mobileNumberPicker="clr-namespace:CherylUI.Controls.MobileNumberPicker"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Styles>
+        <Style Selector="formFields|FormFieldNumberPicker">
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Grid Height="52">
+                        <TextBlock
+                            FontWeight="DemiBold"
+                            HorizontalAlignment="Left"
+                            Text="Users"
+                            VerticalAlignment="Center" />
+                        <mobileNumberPicker:MobileNumberPicker
+                            HorizontalAlignment="Right"
+                            Margin="-30,0"
+                            Maximum="{TemplateBinding Maximum}"
+                            Minimum="{TemplateBinding Minimum}"
+                            Value="{TemplateBinding Value,
+                                                    Mode=TwoWay}"
+                            VerticalAlignment="Center" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter>
+        </Style>
+    </UserControl.Styles>
+</UserControl>
