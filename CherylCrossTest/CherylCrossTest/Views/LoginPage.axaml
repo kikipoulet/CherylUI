@@ -28,7 +28,7 @@
                         Text="Password" />
                     <TextBox PasswordChar="*" Watermark="*****" />
                     <Border Height="30" />
-                    <Button Margin="0,0,0,0">
+                    <Button Click="Button_OnClick" Margin="0,0,0,0">
                         <TextBlock Margin="30,0" Text="Log In" />
                     </Button>
                 </StackPanel>

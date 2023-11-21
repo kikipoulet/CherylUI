@@ -1,0 +1,166 @@
+﻿<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Design.PreviewWith>
+        <Grid
+            Background="{DynamicResource Background}"
+            Height="800"
+            Width="480">
+
+            <TabControl>
+                <TabItem>
+                    <TabItem.Header>
+                        <StackPanel>
+                            <PathIcon Classes="Tab" Data="{StaticResource weather_sunny_regular}" />
+                            <TextBlock Classes="Tab" Text="Tab 1" />
+                        </StackPanel>
+                    </TabItem.Header>
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        Text="Content"
+                        VerticalAlignment="Center" />
+                </TabItem>
+                <TabItem>
+                    <TabItem.Header>
+                        <StackPanel>
+                            <PathIcon Classes="Tab" Data="{StaticResource weather_sunny_regular}" />
+                            <TextBlock Classes="Tab" Text="Tab 2" />
+                        </StackPanel>
+                    </TabItem.Header>
+                </TabItem>
+                <TabItem>
+                    <TabItem.Header>
+                        <StackPanel>
+                            <PathIcon Classes="Tab" Data="{StaticResource weather_sunny_regular}" />
+                            <TextBlock Classes="Tab" Text="Tab 3" />
+                        </StackPanel>
+                    </TabItem.Header>
+                </TabItem>
+                <TabItem>
+                    <TabItem.Header>
+                        <StackPanel>
+                            <PathIcon Classes="Tab" Data="{StaticResource weather_sunny_regular}" />
+                            <TextBlock Classes="Tab" Text="Tab 4" />
+                        </StackPanel>
+                    </TabItem.Header>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </Design.PreviewWith>
+
+    <Style Selector="TabControl">
+        <Setter Property="TabStripPlacement" Value="Bottom" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    CornerRadius="{TemplateBinding CornerRadius}"
+                    HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                    VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                    <DockPanel>
+                        <ItemsPresenter DockPanel.Dock="{TemplateBinding TabStripPlacement}" Name="PART_ItemsPresenter">
+                            <ItemsPresenter.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <UniformGrid Columns="{Binding Items}" Rows="1" />
+                                </ItemsPanelTemplate>
+                            </ItemsPresenter.ItemsPanel>
+                        </ItemsPresenter>
+                        <ContentPresenter
+                            Content="{TemplateBinding SelectedContent}"
+                            ContentTemplate="{TemplateBinding SelectedContentTemplate}"
+                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            Margin="{TemplateBinding Padding}"
+                            Name="PART_SelectedContentHost"
+                            VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </DockPanel>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+
+    <Style Selector="TabItem">
+        <Setter Property="FontSize" Value="50" />
+        <Setter Property="FontWeight" Value="{DynamicResource TabItemHeaderThemeFontWeight}" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="Red" />
+        <Setter Property="Padding" Value="{DynamicResource TabItemHeaderMargin}" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="MinHeight" Value="{DynamicResource TabItemMinHeight}" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border
+                    Background="Transparent"
+                    BorderThickness="0"
+                    CornerRadius="20"
+                    Name="PART_LayoutRootn"
+                    Padding="{TemplateBinding Padding}">
+
+                    <Panel>
+                        <Border
+                            CornerRadius="50"
+                            HorizontalAlignment="Center"
+                            Name="SelectedBorder"
+                            Padding="20,0"
+                            VerticalAlignment="Center">
+
+                            <ContentPresenter
+                                Content="{TemplateBinding Header}"
+                                FontSize="50"
+                                FontWeight="Bold"
+                                Foreground="Red"
+                                HorizontalContentAlignment="Center"
+                                Name="PART_ContentPresentern"
+                                Padding="10,12"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        </Border>
+
+                    </Panel>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+
+    <Style Selector="TabItem TextBlock.Tab">
+        <Setter Property="FontWeight" Value="DemiBold" />
+        <Setter Property="Foreground" Value="{DynamicResource SecondaryText}" />
+        <Setter Property="FontSize" Value="15" />
+
+    </Style>
+
+    <Style Selector="TabItem:selected TextBlock.Tab">
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{DynamicResource Accent}" />
+        <Setter Property="FontSize" Value="16" />
+    </Style>
+
+    <Style Selector="TabItem PathIcon.Tab">
+        <Setter Property="Margin" Value="7" />
+        <Setter Property="Height" Value="24" />
+        <Setter Property="Width" Value="24" />
+        <Setter Property="FontWeight" Value="DemiBold" />
+        <Setter Property="Foreground" Value="{DynamicResource SecondaryText}" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="Transitions">
+            <Transitions>
+                <DoubleTransition Duration="0:0:0.3" Property="Width" />
+
+            </Transitions>
+        </Setter>
+    </Style>
+
+    <Style Selector="TabItem:selected PathIcon.Tab">
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Height" Value="27" />
+        <Setter Property="Width" Value="27" />
+        <Setter Property="Foreground" Value="{DynamicResource Accent}" />
+        <Setter Property="FontSize" Value="18" />
+    </Style>
+
+
+
+
+
+
+</Styles>

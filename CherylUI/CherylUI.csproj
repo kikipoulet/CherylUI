@@ -4,6 +4,11 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>Clément Sepulchre</Authors>
+        <Description>https://github.com/kikipoulet/CherylUI</Description>
+        <PackageProjectUrl>https://github.com/kikipoulet/CherylUI</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/kikipoulet/CherylUI</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
@@ -12,12 +17,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <AvaloniaResource Include="CustomFont\HarmonyOS_Sans-Black.ttf" />
-      <AvaloniaResource Include="CustomFont\HarmonyOS_Sans-Bold.ttf" />
-      <AvaloniaResource Include="CustomFont\HarmonyOS_Sans-Light.ttf" />
-      <AvaloniaResource Include="CustomFont\HarmonyOS_Sans-Medium.ttf" />
-      <AvaloniaResource Include="CustomFont\HarmonyOS_Sans-Regular.ttf" />
-      <AvaloniaResource Include="CustomFont\HarmonyOS_Sans-Thin.ttf" />
       <None Remove="CustomFont\Nunito-Black.ttf" />
       <AvaloniaResource Include="CustomFont\Nunito-Black.ttf" />
       <None Remove="CustomFont\Nunito-BlackItalic.ttf" />

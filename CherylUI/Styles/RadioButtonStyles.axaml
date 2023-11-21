@@ -10,18 +10,24 @@
                 Classes="Card"
                 HorizontalAlignment="Center"
                 Margin="50"
-                VerticalAlignment="Center">
+                Padding="0,30"
+                VerticalAlignment="Center"
+                Width="300">
                 <StackPanel
                     HorizontalAlignment="Center"
-                    Spacing="20"
-                    VerticalAlignment="Center">
+                    Spacing="10"
+                    VerticalAlignment="Center"
+                    Width="200">
 
 
                     <RadioButton>
-                        <TextBlock Text="Essai" />
+                        <TextBlock Text="Option 1" />
                     </RadioButton>
                     <RadioButton>
-                        <TextBlock Text="Essai" />
+                        <TextBlock Text="Option 2" />
+                    </RadioButton>
+                    <RadioButton>
+                        <TextBlock Text="Option 3" />
                     </RadioButton>
                 </StackPanel>
             </Border>
@@ -35,65 +41,86 @@
         <Setter Property="BorderThickness" Value="1.2" />
         <Setter Property="Template">
             <ControlTemplate>
-                <Grid Background="{DynamicResource CardBackground}" ColumnDefinitions="Auto,*">
-                    <Ellipse
-                        Height="26"
-                        Name="border"
-                        Stroke="{TemplateBinding BorderBrush}"
-                        StrokeThickness="5"
-                        VerticalAlignment="Center"
-                        Width="26">
-                        <Ellipse.Transitions>
-                            <Transitions>
-                                <BrushTransition Duration="0:0:0.25" Property="Fill" />
-                                <DoubleTransition Duration="0:0:0.25" Property="Width" />
-                                <DoubleTransition Duration="0:0:0.25" Property="Height" />
-                            </Transitions>
-                        </Ellipse.Transitions>
-                    </Ellipse>
-                    <Ellipse
-                        Height="22"
-                        HorizontalAlignment="Center"
-                        Margin="0,0,0,0"
-                        Name="checkMark"
-                        Stretch="Uniform"
-                        UseLayoutRounding="False"
-                        VerticalAlignment="Center"
-                        Width="22">
-                        <Ellipse.Transitions>
-                            <Transitions>
-                                <BrushTransition Duration="0:0:0.25" Property="Fill" />
-                                <DoubleTransition Duration="0:0:0.2" Property="Width" />
-                                <DoubleTransition Duration="0:0:0.2" Property="Height" />
-                            </Transitions>
-                        </Ellipse.Transitions>
-                    </Ellipse>
-                    <Ellipse
-                        Fill="{DynamicResource CardBackground}"
-                        Height="10"
-                        HorizontalAlignment="Center"
-                        Name="indeterminateMark"
-                        Stretch="Uniform"
-                        UseLayoutRounding="False"
-                        VerticalAlignment="Center"
-                        Width="10">
-                        <Ellipse.Transitions>
-                            <Transitions>
-                                <BrushTransition Duration="0:0:0.25" Property="Fill" />
-                                <DoubleTransition Duration="0:0:0.25" Property="Width" />
-                                <DoubleTransition Duration="0:0:0.25" Property="Height" />
-                            </Transitions>
-                        </Ellipse.Transitions>
-                    </Ellipse>
-                    <ContentPresenter
-                        Content="{TemplateBinding Content}"
-                        ContentTemplate="{TemplateBinding ContentTemplate}"
-                        Grid.Column="1"
-                        Margin="4,0,0,0"
-                        Name="PART_ContentPresenter"
-                        RecognizesAccessKey="True"
-                        VerticalAlignment="Center" />
-                </Grid>
+                <Border
+                    Background="{DynamicResource CardBackground}"
+                    BorderBrush="{DynamicResource ComponentBackground}"
+                    BorderThickness="1"
+                    CornerRadius="12"
+                    Name="GlobalBorder"
+                    Padding="15,12">
+                    <Border.Transitions>
+                        <Transitions>
+                            <BrushTransition Duration="0:0:0.15" Property="BorderBrush" />
+                        </Transitions>
+                    </Border.Transitions>
+                    <Grid ColumnDefinitions="*,Auto" Margin="0,2,0,0">
+                        <Ellipse
+                            Grid.Column="1"
+                            Height="26"
+                            HorizontalAlignment="Right"
+                            Name="border"
+                            Stroke="{TemplateBinding BorderBrush}"
+                            StrokeThickness="5"
+                            VerticalAlignment="Top"
+                            Width="26">
+                            <Ellipse.Transitions>
+                                <Transitions>
+                                    <BrushTransition Duration="0:0:0.15" Property="Fill" />
+                                    <DoubleTransition Duration="0:0:0.15" Property="Width" />
+                                    <DoubleTransition Duration="0:0:0.15" Property="Height" />
+                                </Transitions>
+                            </Ellipse.Transitions>
+                        </Ellipse>
+                        <Ellipse
+                            Grid.Column="1"
+                            Height="22"
+                            HorizontalAlignment="Right"
+                            Margin="0,2,2,0"
+                            Name="checkMark"
+                            Stretch="Uniform"
+                            UseLayoutRounding="False"
+                            VerticalAlignment="Top"
+                            Width="22">
+                            <Ellipse.Transitions>
+                                <Transitions>
+                                    <BrushTransition Duration="0:0:0.25" Property="Fill" />
+                                    <DoubleTransition Duration="0:0:0.2" Property="Width" />
+                                    <DoubleTransition Duration="0:0:0.2" Property="Height" />
+                                    <ThicknessTransition Duration="0:0:0.20" Property="Margin" />
+                                </Transitions>
+                            </Ellipse.Transitions>
+                        </Ellipse>
+                        <Ellipse
+                            Fill="{DynamicResource CardBackground}"
+                            Grid.Column="1"
+                            Height="10"
+                            HorizontalAlignment="Right"
+                            Margin="0,0,0,0"
+                            Name="indeterminateMark"
+                            Stretch="Uniform"
+                            UseLayoutRounding="False"
+                            VerticalAlignment="Top"
+                            Width="10">
+                            <Ellipse.Transitions>
+                                <Transitions>
+                                    <BrushTransition Duration="0:0:0.25" Property="Fill" />
+                                    <DoubleTransition Duration="0:0:0.25" Property="Width" />
+                                    <DoubleTransition Duration="0:0:0.25" Property="Height" />
+                                    <ThicknessTransition Duration="0:0:0.25" Property="Margin" />
+                                </Transitions>
+                            </Ellipse.Transitions>
+                        </Ellipse>
+                        <ContentPresenter
+                            Content="{TemplateBinding Content}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            Grid.Column="0"
+                            HorizontalAlignment="Left"
+                            Margin="4,0,0,0"
+                            Name="PART_ContentPresenter"
+                            RecognizesAccessKey="True"
+                            VerticalAlignment="Center" />
+                    </Grid>
+                </Border>
             </ControlTemplate>
         </Setter>
     </Style>
@@ -107,6 +134,7 @@
         <Setter Property="Width" Value="12" />
         <Setter Property="Height" Value="12" />
         <Setter Property="IsVisible" Value="True" />
+
     </Style>
 
     <Style Selector="RadioButton /template/ Ellipse#border">
@@ -116,12 +144,21 @@
         <Setter Property="Fill" Value="{DynamicResource CardBackground}" />
         <Setter Property="Width" Value="12" />
         <Setter Property="Height" Value="12" />
-
+        <Setter Property="Margin" Value="0,7,7,0" />
     </Style>
     <Style Selector="RadioButton:checked /template/ Ellipse#border">
         <Setter Property="StrokeThickness" Value="3" />
 
+    </Style>
 
+    <Style Selector="RadioButton TextBlock">
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontWeight" Value="DemiBold" />
+    </Style>
+
+    <Style Selector="RadioButton:checked /template/ Border#GlobalBorder">
+        <Setter Property="BorderBrush" Value="{DynamicResource Accent}" />
+        <Setter Property="BorderThickness" Value="1.5" />
     </Style>
 
     <Style Selector="RadioButton /template/ Ellipse#indeterminateMark">

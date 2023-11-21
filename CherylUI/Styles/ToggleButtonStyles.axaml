@@ -130,7 +130,9 @@
                                 x:Name="SwitchKnob2">
                                 <Border />
                                 <Border.Transitions>
-                                    <Transitions />
+                                    <Transitions>
+                                        <DoubleTransition Duration="0:0:0.15" Property="Canvas.Left" />
+                                    </Transitions>
                                 </Border.Transitions>
                             </Border>
 
@@ -143,52 +145,15 @@
     </Style>
 
     <Style Selector="ToggleButton.Switch:unchecked /template/ Border#SwitchKnob2">
-        <Style.Animations>
-            <Animation Duration="0:0:0.2" FillMode="Both">
 
-
-
-                <KeyFrame Cue="30%">
-
-                    <Setter Property="Canvas.Left" Value="30" />
-
-                </KeyFrame>
-
-                <KeyFrame Cue="100%">
-
-                    <Setter Property="Canvas.Left" Value="6" />
-
-                </KeyFrame>
-
-            </Animation>
-        </Style.Animations>
+        <Setter Property="Canvas.Left" Value="6" />
 
     </Style>
 
     <Style Selector="ToggleButton.Switch:checked /template/ Border#SwitchKnob2">
 
         <Setter Property="BoxShadow" Value="0 0 0 0 White" />
-        <Style.Animations>
-            <Animation Duration="0:0:0.2" FillMode="Both">
-                <Animation.Easing>
-                    <SineEaseIn />
-                </Animation.Easing>
-
-
-                <KeyFrame Cue="30%">
-
-                    <Setter Property="Canvas.Left" Value="6" />
-                </KeyFrame>
-
-
-                <KeyFrame Cue="100%">
-
-                    <Setter Property="Canvas.Left" Value="30" />
-
-                </KeyFrame>
-
-            </Animation>
-        </Style.Animations>
+        <Setter Property="Canvas.Left" Value="30" />
 
     </Style>
 

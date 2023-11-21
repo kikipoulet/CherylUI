@@ -2,29 +2,33 @@
 
 
     <Design.PreviewWith>
-        <Grid Height="2400" Width="1080">
+        <Grid
+            Background="{DynamicResource Background}"
+            Height="2400"
+            Width="1080">
 
+            <Border Classes="Card">
+                <StackPanel
+                    HorizontalAlignment="Center"
+                    Spacing="20"
+                    VerticalAlignment="Center">
+                    <Button>
+                        <TextBlock Text="Normal" />
+                    </Button>
 
-            <StackPanel
-                HorizontalAlignment="Center"
-                Spacing="20"
-                VerticalAlignment="Center">
-                <Button>
-                    <TextBlock Text="Normal" />
-                </Button>
+                    <Button Classes="Small" HorizontalAlignment="Center">
+                        <TextBlock Text="Small" />
+                    </Button>
 
-                <Button Classes="Small" HorizontalAlignment="Center">
-                    <TextBlock Text="Small" />
-                </Button>
+                    <Button Classes="Secondary Small" HorizontalAlignment="Center">
+                        <TextBlock Text="Secondary" />
+                    </Button>
 
-                <Button Classes="Secondary Small" HorizontalAlignment="Center">
-                    <TextBlock Text="Secondary" />
-                </Button>
-
-                <Button Classes="Text Small" HorizontalAlignment="Center">
-                    <TextBlock Text="Text" />
-                </Button>
-            </StackPanel>
+                    <Button Classes="Text Small" HorizontalAlignment="Center">
+                        <TextBlock Text="Text" />
+                    </Button>
+                </StackPanel>
+            </Border>
         </Grid>
     </Design.PreviewWith>
 
@@ -66,14 +70,13 @@
                                 <BrushTransition Duration="0:0:0.2" Property="Background" />
                             </Transitions>
                         </Border.Transitions>
-                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
 
-                            <ContentPresenter
-                                Content="{TemplateBinding Content}"
-                                HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                RecognizesAccessKey="True"
-                                VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
-                        </StackPanel>
+                        <ContentPresenter
+                            Content="{TemplateBinding Content}"
+                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            RecognizesAccessKey="True"
+                            VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+
 
                     </Border>
 

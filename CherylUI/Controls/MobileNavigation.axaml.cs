@@ -1,7 +1,9 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
+using Avalonia.Controls.Templates;
 using Avalonia.Markup.Xaml;
+using Avalonia.Threading;
 using Avalonia.VisualTree;
 
 namespace CherylUI.Controls;
@@ -39,8 +41,28 @@ namespace CherylUI.Controls;
 
             var page = instance.Pages.Pop();
            
-            instance.Content = page;
+            
             instance.CurrentPage = page;
+            
+            var x = instance.GetTemplateChildren();
+            ContentControl animateCT = (ContentControl) x.First(f => f.Name == "animateunder");
+            ContentControl baseCT = (ContentControl) x.First(f => f.Name == "base");
+
+            animateCT.Content = page;
+            baseCT.Animate<double>(OpacityProperty,1,0, TimeSpan.FromMilliseconds(300));
+            baseCT.Animate<Thickness>(MarginProperty,new Thickness(0,0,0,0),new Thickness(20,0,-20,0), TimeSpan.FromMilliseconds(300));
+
+            Task.Run(() =>
+            {
+                Thread.Sleep(400);
+                Dispatcher.UIThread.Invoke(() =>
+                {
+                    animateCT.Content = new Grid();
+                    baseCT.Opacity = 1;
+                    baseCT.Margin = new Thickness(0);
+                    instance.Content = page;
+                });
+            });
 
         }
         public Control CurrentPage;
@@ -60,10 +82,29 @@ namespace CherylUI.Controls;
             var m =  content ;
             instance.CurrentPage = m;
             
-            instance.Content = m;
+            
 
+            var x = instance.GetTemplateChildren();
+            ContentControl animateCT = (ContentControl) x.First(f => f.Name == "animate");
+            ContentControl baseCT = (ContentControl) x.First(f => f.Name == "base");
+
+            animateCT.Content = m;
+            animateCT.Animate<double>(OpacityProperty,0,1, TimeSpan.FromMilliseconds(300));
+            animateCT.Animate<Thickness>(MarginProperty,new Thickness(20,0,-20,0),new Thickness(0), TimeSpan.FromMilliseconds(300));
+
+            Task.Run(() =>
+            {
+                Thread.Sleep(400);
+                Dispatcher.UIThread.Invoke(() =>
+                {
+                    animateCT.Content = new Grid();
+                    instance.Content = m;
+                });
+            });
             
         }
+
+      
 
         Stack<Control> Pages = new Stack<Control>();
         
@@ -80,12 +121,13 @@ namespace CherylUI.Controls;
             
                 try
                 {
-                    container = ((IClassicDesktopStyleApplicationLifetime)Application.Current.ApplicationLifetime).MainWindow.GetVisualDescendants().OfType<MobileNavigation>().First();
+                    var m = ((IClassicDesktopStyleApplicationLifetime)Application.Current.ApplicationLifetime).MainWindow;
+                        container = m.GetVisualDescendants().OfType<MobileNavigation>().First();
                 }
-                catch (Exception ex)
+                catch (Exception exc2)
                 {
-                    throw new Exception(
-                        "You are trying to use a InteractiveContainer functionality without declaring one !");
+                    Console.WriteLine(exc2.Message);
+                    throw new Exception("You are trying to use a InteractiveContainer functionality without declaring one !");
                 }
                 
             }

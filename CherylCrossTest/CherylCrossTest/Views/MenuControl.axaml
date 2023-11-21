@@ -1,0 +1,64 @@
+﻿<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="CherylCrossTest.Views.MenuControl"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Background="{DynamicResource Background}">
+        <TabControl>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel>
+                        <PathIcon Classes="Tab" Data="{StaticResource weather_sunny_regular}" />
+                        <TextBlock Classes="Tab" Text="Tab 1" />
+                    </StackPanel>
+                </TabItem.Header>
+                <StackPanel
+                    HorizontalAlignment="Center"
+                    Spacing="20"
+                    VerticalAlignment="Center">
+
+                    <Button Click="GoToSettings">
+                        <TextBlock Text="Settings Page" />
+                    </Button>
+
+                    <Button Click="GoToAlarm">
+                        <TextBlock Text="Alarm Page" />
+                    </Button>
+
+                    <Button Click="GoToLoginPage">
+                        <TextBlock Text="Login Page" />
+                    </Button>
+                </StackPanel>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel>
+                        <PathIcon Classes="Tab" Data="{StaticResource weather_sunny_regular}" />
+                        <TextBlock Classes="Tab" Text="Tab 2" />
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel>
+                        <PathIcon Classes="Tab" Data="{StaticResource weather_sunny_regular}" />
+                        <TextBlock Classes="Tab" Text="Tab 3" />
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel>
+                        <PathIcon Classes="Tab" Data="{StaticResource weather_sunny_regular}" />
+                        <TextBlock Classes="Tab" Text="Tab 4" />
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</UserControl>

@@ -29,4 +29,5 @@
     <StyleInclude Source="Styles/ListboxStyles.axaml" />
     <StyleInclude Source="Styles/SliderStyles.axaml" />
     <StyleInclude Source="Styles/TextBoxStyles.axaml" />
+    <StyleInclude Source="Styles/TabControlStyles.axaml" />
 </Styles>

@@ -10,6 +10,7 @@
                 Classes="Card"
                 HorizontalAlignment="Center"
                 Margin="50"
+                Padding="40,50"
                 VerticalAlignment="Center">
                 <StackPanel
                     HorizontalAlignment="Center"

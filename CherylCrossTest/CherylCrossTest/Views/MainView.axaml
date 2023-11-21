@@ -16,22 +16,6 @@
     xmlns:vm="clr-namespace:CherylCrossTest.ViewModels"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <controls:InteractiveContainer>
-        <StackPanel
-            HorizontalAlignment="Center"
-            Spacing="20"
-            VerticalAlignment="Center">
-
-            <Button Click="GoToSettings">
-                <TextBlock Text="Settings Page" />
-            </Button>
-
-            <Button Click="GoToAlarm">
-                <TextBlock Text="Alarm Page" />
-            </Button>
-
-            <Button Click="GoToLoginPage">
-                <TextBlock Text="Login Page" />
-            </Button>
-        </StackPanel>
+        <Grid />
     </controls:InteractiveContainer>
 </UserControl>

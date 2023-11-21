@@ -22,14 +22,14 @@
                         <TextBlock Text="Small" />
                     </Button>
 
-                    <Button Classes="Secondary Small" HorizontalAlignment="Center">
+                    <Button Classes="Secondary" HorizontalAlignment="Center">
                         <TextBlock Text="Secondary" />
                     </Button>
 
-                    <Button Classes="Text Small" HorizontalAlignment="Center">
+                    <Button Classes="Text" HorizontalAlignment="Center">
                         <TextBlock Text="Text" />
                     </Button>
-                    <Button Classes="Small">
+                    <Button Classes="">
                         <TextBlock Text="Normal" />
                     </Button>
                 </StackPanel>

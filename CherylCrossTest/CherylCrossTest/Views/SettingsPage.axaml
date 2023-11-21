@@ -3,18 +3,29 @@
     d:DesignWidth="800"
     mc:Ignorable="d"
     x:Class="CherylCrossTest.Views.SettingsPage"
+    x:DataType="viewModels:MainViewModel"
     xmlns="https://github.com/avaloniaui"
     xmlns:cherylUi="clr-namespace:CherylUI;assembly=CherylUI"
     xmlns:controls="clr-namespace:CherylUI.Controls;assembly=CherylUI"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:formFields="clr-namespace:CherylUI.Controls.FormFields;assembly=CherylUI"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:mobileNumberPicker="clr-namespace:CherylUI.Controls.MobileNumberPicker;assembly=CherylUI"
     xmlns:mobilePicker="clr-namespace:CherylUI.Controls.MobilePicker;assembly=CherylUI"
     xmlns:objectModel="clr-namespace:System.Collections.ObjectModel;assembly=System.ObjectModel"
     xmlns:system="clr-namespace:System;assembly=System.Runtime"
+    xmlns:viewModels="clr-namespace:CherylCrossTest.ViewModels"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.DataContext>
+        <viewModels:MainViewModel />
+    </UserControl.DataContext>
+
     <controls:SliverPage Header="Settings">
         <StackPanel>
+
+
+
+
             <controls:GroupBox Header="Brightness">
                 <StackPanel>
                     <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,20">
@@ -38,210 +49,167 @@
                             Value="50" />
                     </Grid>
 
-                    <Grid Height="52" Margin="0,10">
-                        <TextBlock
-                            FontWeight="DemiBold"
-                            HorizontalAlignment="Left"
-                            Text="Automatic"
-                            VerticalAlignment="Center" />
-                        <ToggleButton
-                            Classes="Switch"
-                            HorizontalAlignment="Right"
-                            IsChecked="True"
-                            Margin="-14,0"
-                            VerticalAlignment="Center" />
-                    </Grid>
+                    <formFields:FormFieldSwitch Title="Automatic" />
 
                 </StackPanel>
             </controls:GroupBox>
-
 
             <controls:GroupBox Header="View mode">
                 <StackPanel>
-                    <Grid Height="52">
-                        <TextBlock
-                            FontWeight="DemiBold"
-                            HorizontalAlignment="Left"
-                            Text="Dark mode"
-                            VerticalAlignment="Center" />
-                        <ToggleButton
-                            Classes="Switch"
-                            HorizontalAlignment="Right"
-                            IsCheckedChanged="ToggleButton_OnIsCheckedChanged"
-                            Margin="-14,0"
-                            VerticalAlignment="Center" />
-                    </Grid>
+                    <formFields:FormFieldSwitch Title="Dark Mode" />
+
                     <cherylUi:HorizontalSeparator />
 
-                    <Grid Height="52">
-                        <TextBlock
-                            FontWeight="DemiBold"
-                            HorizontalAlignment="Left"
-                            Text="Eye Comfort"
-                            VerticalAlignment="Center" />
-                        <PathIcon
-                            Data="{StaticResource chevron_right_regular}"
-                            Foreground="{DynamicResource SecondaryText}"
-                            Height="13"
-                            HorizontalAlignment="Right"
-                            VerticalAlignment="Center"
-                            Width="13" />
-                    </Grid>
+                    <formFields:FormFieldAction Command="{Binding LaunchToast}" Title="Eye Comfort" />
+                    <cherylUi:HorizontalSeparator />
+
+                    <formFields:FormFieldNumberPicker
+                        Maximum="20"
+                        Minimum="0"
+                        Value="10" />
+
+                    <cherylUi:HorizontalSeparator />
+
+                    <formFields:FormFieldPicker
+                        DialogSubTitle="Text style of your system apps."
+                        DialogTitle="Text Style"
+                        SelectedItem="Default"
+                        Title="Text Style">
+                        <formFields:FormFieldPicker.Items>
+                            <objectModel:ObservableCollection x:TypeArguments="system:String">
+                                <system:String>Default</system:String>
+                                <system:String>Italic</system:String>
+                                <system:String>Bold</system:String>
+                            </objectModel:ObservableCollection>
+                        </formFields:FormFieldPicker.Items>
+                    </formFields:FormFieldPicker>
+                </StackPanel>
+            </controls:GroupBox>
+
+
+
+
+            <controls:GroupBox Header="Text">
+                <StackPanel>
+                    <formFields:FormFieldPicker
+                        DialogSubTitle="Text style of your system apps."
+                        DialogTitle="Text Style"
+                        SelectedItem="Default"
+                        Title="Text Style">
+                        <formFields:FormFieldPicker.Items>
+                            <objectModel:ObservableCollection x:TypeArguments="system:String">
+                                <system:String>Default</system:String>
+                                <system:String>Italic</system:String>
+                                <system:String>Bold</system:String>
+                            </objectModel:ObservableCollection>
+                        </formFields:FormFieldPicker.Items>
+                    </formFields:FormFieldPicker>
+
+                    <cherylUi:HorizontalSeparator />
+
+                    <formFields:FormFieldAction Command="{Binding LaunchToast}" Title="Text size and width" />
+                    <cherylUi:HorizontalSeparator />
+
+                    <formFields:FormFieldAction Command="{Binding LaunchToast}" Title="Display Size" />
+                </StackPanel>
+            </controls:GroupBox>
+
+            <controls:GroupBox Header="Lock screen">
+                <StackPanel>
+
+                    <formFields:FormFieldSwitch IsChecked="{Binding Description}" Title="Always on Display" />
+                    <cherylUi:HorizontalSeparator />
+
+                    <formFields:FormFieldAction Command="{Binding LaunchToast}" Title="Clock style" />
+
+                    <cherylUi:HorizontalSeparator />
+
+                    <formFields:FormFieldAction Command="{Binding LaunchToast}" Title="WallPaper" />
+
+                    <cherylUi:HorizontalSeparator />
+
+                    <formFields:FormFieldSwitch IsChecked="{Binding Description}" Title="Show Informations" />
+
+                    <cherylUi:HorizontalSeparator />
+
+                    <formFields:FormFieldNumberPicker
+                        Maximum="20"
+                        Minimum="0"
+                        Value="10" />
 
                 </StackPanel>
             </controls:GroupBox>
 
             <TextBlock
                 Classes="Secondary"
-                FontSize="15"
                 Margin="20,32,0,10"
-                Text="Text" />
-            <Border Classes="Card" Padding="0,5">
-                <StackPanel Margin="20,0">
-                    <Grid Height="52">
-                        <TextBlock
-                            FontWeight="DemiBold"
-                            HorizontalAlignment="Left"
-                            Text="Text Style"
-                            VerticalAlignment="Center" />
-                        <mobilePicker:MobilePicker
-                            HorizontalAlignment="Right"
-                            Margin="0,0,-30,0"
-                            SelectedItem="Default"
-                            SubTitle="Text style of your system apps."
-                            Title="Text Style"
-                            VerticalAlignment="Center">
-                            <mobilePicker:MobilePicker.Items>
-                                <objectModel:ObservableCollection x:TypeArguments="system:String">
-                                    <system:String>Default</system:String>
-                                    <system:String>Italic</system:String>
-                                    <system:String>Bold</system:String>
+                Text="Billing" />
 
-                                </objectModel:ObservableCollection>
-                            </mobilePicker:MobilePicker.Items>
-                        </mobilePicker:MobilePicker>
-                    </Grid>
-                    <cherylUi:HorizontalSeparator />
+            <RadioButton>
+                <StackPanel>
+                    <TextBlock
+                        FontSize="13"
+                        FontWeight="SemiBold"
+                        Foreground="{DynamicResource SecondaryText}"
+                        Text="MONTHLY" />
+                    <TextBlock
+                        FontSize="18"
+                        FontWeight="Bold"
+                        Margin="0,7,0,0"
+                        Text="$17.99 / month" />
 
-                    <Grid Height="52">
+                    <Border
+                        Background="#227BD573"
+                        CornerRadius="25"
+                        HorizontalAlignment="Left"
+                        Margin="0,14,0,0"
+                        Padding="14,4">
                         <TextBlock
-                            FontWeight="DemiBold"
-                            HorizontalAlignment="Left"
-                            Text="Text size and weight"
-                            VerticalAlignment="Center" />
-                        <PathIcon
-                            Data="{StaticResource chevron_right_regular}"
-                            Foreground="{DynamicResource SecondaryText}"
-                            Height="13"
-                            HorizontalAlignment="Right"
-                            VerticalAlignment="Center"
-                            Width="13" />
-                    </Grid>
-                    <cherylUi:HorizontalSeparator />
-
-                    <Grid Height="52">
-                        <TextBlock
-                            FontWeight="DemiBold"
-                            HorizontalAlignment="Left"
-                            Text="Display size"
-                            VerticalAlignment="Center" />
-                        <PathIcon
-                            Data="{StaticResource chevron_right_regular}"
-                            Foreground="{DynamicResource SecondaryText}"
-                            Height="13"
-                            HorizontalAlignment="Right"
-                            VerticalAlignment="Center"
-                            Width="13" />
-                    </Grid>
+                            FontSize="12"
+                            FontWeight="Bold"
+                            Foreground="#7BD573"
+                            Text="1 Week Free Trial" />
+                    </Border>
                 </StackPanel>
-            </Border>
+            </RadioButton>
 
-            <TextBlock
-                Classes="Secondary"
-                FontSize="15"
-                Margin="20,32,0,10"
-                Text="Lock screen" />
-            <Border Classes="Card" Padding="0,5">
-                <StackPanel Margin="20,0">
-                    <Grid Height="52">
+            <RadioButton IsChecked="True" Margin="0,12,0,0">
+                <StackPanel>
+                    <TextBlock
+                        FontSize="13"
+                        FontWeight="SemiBold"
+                        Foreground="{DynamicResource SecondaryText}"
+                        Text="ANNUALLY" />
+                    <TextBlock
+                        FontSize="18"
+                        FontWeight="Bold"
+                        Margin="0,7,0,0"
+                        Text="$169.99 / year" />
+
+                    <Border
+                        Background="#227BD573"
+                        CornerRadius="25"
+                        HorizontalAlignment="Left"
+                        Margin="0,14,0,0"
+                        Padding="14,4">
                         <TextBlock
-                            FontWeight="DemiBold"
-                            HorizontalAlignment="Left"
-                            Text="Always On Display"
-                            VerticalAlignment="Center" />
-                        <ToggleButton
-                            Classes="Switch"
-                            HorizontalAlignment="Right"
-                            Margin="-14,0"
-                            VerticalAlignment="Center" />
-                    </Grid>
-                    <cherylUi:HorizontalSeparator />
-
-                    <Grid Height="52">
-                        <TextBlock
-                            FontWeight="DemiBold"
-                            HorizontalAlignment="Left"
-                            Text="Clock style"
-                            VerticalAlignment="Center" />
-                        <PathIcon
-                            Data="{StaticResource chevron_right_regular}"
-                            Foreground="{DynamicResource SecondaryText}"
-                            Height="13"
-                            HorizontalAlignment="Right"
-                            VerticalAlignment="Center"
-                            Width="13" />
-                    </Grid>
-
-                    <cherylUi:HorizontalSeparator />
-
-                    <Grid Height="52">
-                        <TextBlock
-                            FontWeight="DemiBold"
-                            HorizontalAlignment="Left"
-                            Text="Wallpaper"
-                            VerticalAlignment="Center" />
-                        <PathIcon
-                            Data="{StaticResource chevron_right_regular}"
-                            Foreground="{DynamicResource SecondaryText}"
-                            Height="13"
-                            HorizontalAlignment="Right"
-                            VerticalAlignment="Center"
-                            Width="13" />
-                    </Grid>
-
-                    <cherylUi:HorizontalSeparator />
-
-                    <Grid Height="52">
-                        <TextBlock
-                            FontWeight="DemiBold"
-                            HorizontalAlignment="Left"
-                            Text="Show Informations"
-                            VerticalAlignment="Center" />
-                        <ToggleButton
-                            Classes="Switch"
-                            HorizontalAlignment="Right"
-                            Margin="-14,0"
-                            VerticalAlignment="Center" />
-                    </Grid>
-
-                    <cherylUi:HorizontalSeparator />
-
-                    <Grid Height="52">
-                        <TextBlock
-                            FontWeight="DemiBold"
-                            HorizontalAlignment="Left"
-                            Text="Users"
-                            VerticalAlignment="Center" />
-                        <mobileNumberPicker:MobileNumberPicker
-                            HorizontalAlignment="Right"
-                            Margin="-20,0"
-                            VerticalAlignment="Center" />
-                    </Grid>
-
+                            FontSize="12"
+                            FontWeight="Bold"
+                            Foreground="#7BD573"
+                            Text="1 Week Free Trial" />
+                    </Border>
                 </StackPanel>
-            </Border>
+            </RadioButton>
 
             <Border Height="50" />
+
+            <ToggleButton Classes="Switch" Click="ToggleButton_OnIsCheckedChanged" />
+
+            <Border Height="50" />
+
+            <Button Click="gotologin">
+                <TextBlock Text="Go To login" />
+            </Button>
 
         </StackPanel>
     </controls:SliverPage>

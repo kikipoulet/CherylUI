@@ -1,6 +1,20 @@
-﻿namespace CherylCrossTest.ViewModels;
+﻿using Avalonia.Controls;
+using CherylUI.Controls;
+using ReactiveUI;
 
-public class MainViewModel : ViewModelBase
+namespace CherylCrossTest.ViewModels;
+
+public class MainViewModel : ReactiveObject
 {
-    public string Greeting => "Welcome to Avalonia!";
+    private bool _description = false;
+    public bool Description
+    {
+        get => _description;
+        set => this.RaiseAndSetIfChanged(ref _description, value);
+    }
+
+    public void LaunchToast()
+    {
+        InteractiveContainer.ShowToast(new TextBlock(){Text = "Hit !"},3);
+    }
 }
