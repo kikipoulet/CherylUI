@@ -11,6 +11,8 @@ Yes it is.
 
 ### Mobile UI Library for AvaloniaUI ! <img src="https://www.avaloniaui.net/img/logo/avalonia-white-purple.svg"></img>
 
+Documentation and installation are on the [wiki](https://github.com/kikipoulet/CherylUI/wiki/1.-Installation) of this repository 
+
 <br/>
 
 https://github.com/kikipoulet/CherylUI/assets/19242427/84b27103-5e32-4fe4-b916-88537f1d6679
