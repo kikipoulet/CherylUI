@@ -13,6 +13,19 @@ Yes it is.
 
 Documentation and installation are on the [wiki](https://github.com/kikipoulet/CherylUI/wiki/1.-Installation) of this repository 
 
+<details>
+  <summary>1.0.1 New Additions</summary>
+ <img src="https://raw.githubusercontent.com/kikipoulet/CherylUI/master/CherylImages/navigationtransition.gif"></img> 
+  <img src="https://raw.githubusercontent.com/kikipoulet/CherylUI/master/CherylImages/sliverpagelong.gif"></img> 
+ <img src="https://raw.githubusercontent.com/kikipoulet/CherylUI/master/CherylImages/bottomtabs.gif"></img> 
+  <img src="https://raw.githubusercontent.com/kikipoulet/CherylUI/master/CherylImages/datepicker.gif"></img> 
+  <img src="https://raw.githubusercontent.com/kikipoulet/CherylUI/master/CherylImages/dialog.gif"></img> 
+  <img src="https://raw.githubusercontent.com/kikipoulet/CherylUI/master/CherylImages/toast.gif"></img> 
+</details>
+
+
+ 
+
 <br/>
 
 https://github.com/kikipoulet/CherylUI/assets/19242427/84b27103-5e32-4fe4-b916-88537f1d6679
