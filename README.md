@@ -16,16 +16,11 @@ Yes it is.
 [Controls Documentation](https://github.com/kikipoulet/CherylUI/wiki/2.-Controls) 
 
 <br/>
-<details>
-  <summary>1.0.1 New Additions</summary>
- <img src="https://raw.githubusercontent.com/kikipoulet/CherylUI/master/CherylImages/navigationtransition.gif"></img> 
-  <img src="https://raw.githubusercontent.com/kikipoulet/CherylUI/master/CherylImages/sliverpagelong.gif"></img> 
- <img src="https://raw.githubusercontent.com/kikipoulet/CherylUI/master/CherylImages/bottomtabs.gif"></img> 
-  <img src="https://raw.githubusercontent.com/kikipoulet/CherylUI/master/CherylImages/datepicker.gif"></img> 
-  <img src="https://raw.githubusercontent.com/kikipoulet/CherylUI/master/CherylImages/dialog.gif"></img> 
-  <img src="https://raw.githubusercontent.com/kikipoulet/CherylUI/master/CherylImages/toast.gif"></img> 
-</details>
 
+Currently working on adding glassmorphism :
+
+
+<img src="https://github.com/kikipoulet/CherylUI/assets/19242427/c070cde7-1438-4a71-8f08-0f86893925c1" width="500">
 
  
 
