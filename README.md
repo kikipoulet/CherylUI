@@ -11,15 +11,25 @@ Yes it is.
 
 ### Mobile UI Library for AvaloniaUI ! <img src="https://www.avaloniaui.net/img/logo/avalonia-white-purple.svg"></img>
 
-Documentation and installation are on the [wiki](https://github.com/kikipoulet/CherylUI/wiki/1.-Installation) of this repository 
+[Install CherylUI](https://github.com/kikipoulet/CherylUI/wiki/1.-Installation) 
+
+[Controls Documentation](https://github.com/kikipoulet/CherylUI/wiki/2.-Controls) 
 
 <br/>
 
-https://github.com/kikipoulet/CherylUI/assets/19242427/84b27103-5e32-4fe4-b916-88537f1d6679
+Currently working on adding glassmorphism :
 
-After some mobile experiments in the [SukiUI](https://github.com/kikipoulet/SukiUI) library and because of the recent mobile improvements of AvaloniaUI, I've decided to move the mobile controls to a new library for mobile only and develop a real library for mobile.
-<br/><br/>Mobile platform need controls complete resizing, quicker animations to preserve performance, some design changes and obviously some Mobile specific controls (Pickers, ..) 
-<br/><br/>The main inspiration for design will be HarmonyOS design guidelines, while keeping a connection with SukiUI design.
+
+<img src="https://github.com/kikipoulet/CherylUI/assets/19242427/2bc501b1-63ca-49af-a1a8-40bf3a35b874" width="500">
+
+ 
+
+<br/>
+
+### Controls Demo
+
+https://github.com/kikipoulet/CherylUI/assets/19242427/6f2d42f8-6476-473f-8986-1b82750c0236
+
 
 ### ℹ️ High-Level controls
 
