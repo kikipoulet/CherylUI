@@ -24,10 +24,16 @@
                             <Grid>
 
                                 <Border
-                                    Background="White"
+                                    Background="#aaffffff"
                                     CornerRadius="{TemplateBinding CornerRadius}"
                                     IsVisible="{DynamicResource IsLight}"
-                                    Opacity="0.4" />
+                                    Opacity="0.57" />
+
+                                <Border
+                                    Background="#3b3b3b"
+                                    CornerRadius="{TemplateBinding CornerRadius}"
+                                    IsVisible="{DynamicResource IsDark}"
+                                    Opacity="0.5" />
 
                                 <glassmorphism:BlurBackground />
 

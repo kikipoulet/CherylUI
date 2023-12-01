@@ -142,7 +142,7 @@ namespace CherylUI.Glassmorphism;
                 {
                     acrylliPaint.Shader = compose;
                     acrylliPaint.IsAntialias = true;
-                    canvas.DrawRect(0, 0, (float)_bounds.Width, (float)_bounds.Height, acrylliPaint);
+                  //  canvas.DrawRect(0, 0, (float)_bounds.Width, (float)_bounds.Height, acrylliPaint);
                 } 
             }
 
