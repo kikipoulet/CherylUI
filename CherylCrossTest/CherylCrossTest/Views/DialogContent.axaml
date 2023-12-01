@@ -1,0 +1,25 @@
+﻿<UserControl
+    Height="150"
+    Width="250"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="CherylCrossTest.Views.DialogContent"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <TextBlock
+            HorizontalAlignment="Center"
+            Margin="0,0,0,35"
+            Text="This is a dialog."
+            VerticalAlignment="Center" />
+        <Button
+            Classes="Text"
+            Click="Button_OnClick"
+            VerticalAlignment="Bottom">
+            <TextBlock Text="Close" />
+        </Button>
+    </Grid>
+</UserControl>

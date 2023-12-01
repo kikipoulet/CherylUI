@@ -13,7 +13,7 @@
             <Setter Property="Template">
                 <ControlTemplate>
 
-                    <DockPanel Height="52">
+                    <DockPanel Height="47">
                         <ToggleButton
                             Classes="Switch"
                             DockPanel.Dock="Right"

@@ -13,7 +13,7 @@
         <Style Selector="formFields|FormFieldNumberPicker">
             <Setter Property="Template">
                 <ControlTemplate>
-                    <Grid Height="52">
+                    <Grid Height="47">
                         <TextBlock
                             FontWeight="DemiBold"
                             HorizontalAlignment="Left"

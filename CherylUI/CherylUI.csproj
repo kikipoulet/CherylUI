@@ -12,12 +12,17 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="Avalonia.Skia" Version="11.0.5" />
       <PackageReference Include="Avalonia.Themes.Simple" Version="11.0.5" />
       <PackageReference Include="ReactiveUI" Version="18.3.1" />
+      <PackageReference Include="SkiaSharp" Version="2.88.6" />
     </ItemGroup>
 
     <ItemGroup>
       <None Remove="CustomFont\Nunito-Black.ttf" />
+      <AvaloniaResource Include="Assets\gradient_dark.png" />
+      <AvaloniaResource Include="Assets\gradient_light_strong.png" />
+      <AvaloniaResource Include="Assets\gradient_dark_strong.png" />
       <AvaloniaResource Include="CustomFont\Nunito-Black.ttf" />
       <None Remove="CustomFont\Nunito-BlackItalic.ttf" />
       <AvaloniaResource Include="CustomFont\Nunito-BlackItalic.ttf" />
@@ -49,6 +54,18 @@
       <AvaloniaResource Include="CustomFont\Nunito-SemiBold.ttf" />
       <None Remove="CustomFont\Nunito-SemiBoldItalic.ttf" />
       <AvaloniaResource Include="CustomFont\Nunito-SemiBoldItalic.ttf" />
+      <None Remove="CustomFont\Quicksand-Bold.ttf" />
+      <AvaloniaResource Include="CustomFont\Quicksand-Bold.ttf" />
+      <None Remove="CustomFont\Quicksand-Light.ttf" />
+      <AvaloniaResource Include="CustomFont\Quicksand-Light.ttf" />
+      <None Remove="CustomFont\Quicksand-Medium.ttf" />
+      <AvaloniaResource Include="CustomFont\Quicksand-Medium.ttf" />
+      <None Remove="CustomFont\Quicksand-Regular.ttf" />
+      <AvaloniaResource Include="CustomFont\Quicksand-Regular.ttf" />
+      <None Remove="CustomFont\Quicksand-SemiBold.ttf" />
+      <AvaloniaResource Include="CustomFont\Quicksand-SemiBold.ttf" />
+      <None Remove="Assets\gradient_light.png" />
+      <AvaloniaResource Include="Assets\gradient_light.png" />
     </ItemGroup>
 
     <ItemGroup>

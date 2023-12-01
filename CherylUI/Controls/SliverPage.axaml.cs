@@ -112,10 +112,10 @@ namespace CherylUI.Controls;
 
          
 
-            double fontsize = 45 - (Offset / 4.5);
+            double fontsize = 45 - (Offset / 2.5);
 
-            if (fontsize < 24)
-                return 24;
+            if (fontsize < 25)
+                return 25;
 
             return fontsize;
         }

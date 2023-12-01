@@ -6,6 +6,8 @@
     xmlns="https://github.com/avaloniaui"
     xmlns:controls="clr-namespace:CherylUI.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:glassMorphism="clr-namespace:CherylUI.Controls.GlassMorphism"
+    xmlns:glassmorphism="clr-namespace:CherylUI.Glassmorphism"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <UserControl.Styles>
@@ -18,14 +20,12 @@
                             Margin="20,32,0,10"
                             Text="{TemplateBinding Header}" />
 
-                        <Border
-                            Classes="Card"
-                            ClipToBounds="True"
-                            Padding="0,5">
-                            <Grid Margin="10,0">
+                        <glassMorphism:GlassCard ClipToBounds="True" Padding="0,10">
+                            <Grid Margin="10,-6">
+
                                 <ContentControl Content="{TemplateBinding Content}" />
                             </Grid>
-                        </Border>
+                        </glassMorphism:GlassCard>
                     </StackPanel>
 
                 </ControlTemplate>

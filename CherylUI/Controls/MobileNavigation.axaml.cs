@@ -48,8 +48,13 @@ namespace CherylUI.Controls;
             ContentControl animateCT = (ContentControl) x.First(f => f.Name == "animateunder");
             ContentControl baseCT = (ContentControl) x.First(f => f.Name == "base");
 
+            
+            animateCT.IsHitTestVisible = false;
+            baseCT.IsHitTestVisible = false;
+            
             animateCT.Content = page;
             baseCT.Animate<double>(OpacityProperty,1,0, TimeSpan.FromMilliseconds(300));
+            animateCT.Animate<double>(OpacityProperty,0,1, TimeSpan.FromMilliseconds(300));
             baseCT.Animate<Thickness>(MarginProperty,new Thickness(0,0,0,0),new Thickness(20,0,-20,0), TimeSpan.FromMilliseconds(300));
 
             Task.Run(() =>
@@ -61,6 +66,9 @@ namespace CherylUI.Controls;
                     baseCT.Opacity = 1;
                     baseCT.Margin = new Thickness(0);
                     instance.Content = page;
+                    
+                 
+                    baseCT.IsHitTestVisible = true;
                 });
             });
 
@@ -88,8 +96,12 @@ namespace CherylUI.Controls;
             ContentControl animateCT = (ContentControl) x.First(f => f.Name == "animate");
             ContentControl baseCT = (ContentControl) x.First(f => f.Name == "base");
 
+            animateCT.IsHitTestVisible = false;
+            baseCT.IsHitTestVisible = false;
+            
             animateCT.Content = m;
             animateCT.Animate<double>(OpacityProperty,0,1, TimeSpan.FromMilliseconds(300));
+            baseCT.Animate<double>(OpacityProperty,1,0, TimeSpan.FromMilliseconds(200));
             animateCT.Animate<Thickness>(MarginProperty,new Thickness(20,0,-20,0),new Thickness(0), TimeSpan.FromMilliseconds(300));
 
             Task.Run(() =>
@@ -99,6 +111,8 @@ namespace CherylUI.Controls;
                 {
                     animateCT.Content = new Grid();
                     instance.Content = m;
+                    baseCT.Opacity = 1;
+                    baseCT.IsHitTestVisible = true;
                 });
             });
             

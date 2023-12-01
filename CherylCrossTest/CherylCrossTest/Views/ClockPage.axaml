@@ -6,6 +6,7 @@
     xmlns="https://github.com/avaloniaui"
     xmlns:controls="clr-namespace:CherylUI.Controls;assembly=CherylUI"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:glassMorphism="clr-namespace:CherylUI.Controls.GlassMorphism;assembly=CherylUI"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
@@ -16,7 +17,7 @@
                 Margin="70,00,50,50"
                 Source="../Assets/3d-fluency-clock.png" />
 
-            <Border Classes="Card" Margin="3,7">
+            <glassMorphism:GlassCard Margin="0,8">
                 <DockPanel>
                     <ToggleButton
                         Classes="Switch"
@@ -43,9 +44,9 @@
                             VerticalAlignment="Bottom" />
                     </StackPanel>
                 </DockPanel>
-            </Border>
+            </glassMorphism:GlassCard>
 
-            <Border Classes="Card" Margin="3,7">
+            <glassMorphism:GlassCard Margin="0,8">
                 <DockPanel>
                     <ToggleButton
                         Classes="Switch"
@@ -72,9 +73,9 @@
                             VerticalAlignment="Bottom" />
                     </StackPanel>
                 </DockPanel>
-            </Border>
+            </glassMorphism:GlassCard>
 
-            <Border Classes="Card" Margin="3,7">
+            <glassMorphism:GlassCard Margin="0,8">
                 <DockPanel>
                     <ToggleButton
                         Classes="Switch"
@@ -101,7 +102,7 @@
                             VerticalAlignment="Bottom" />
                     </StackPanel>
                 </DockPanel>
-            </Border>
+            </glassMorphism:GlassCard>
         </StackPanel>
     </controls:SliverPage>
 

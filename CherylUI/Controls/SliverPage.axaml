@@ -29,7 +29,6 @@
                             <Grid Margin="{Binding #scrollView.Offset, Converter={StaticResource MarginConverter}}">
                                 <TextBlock
                                     FontSize="{Binding #scrollView.Offset, Converter={StaticResource FontSizeConverter}}"
-                                    FontWeight="DemiBold"
                                     HorizontalAlignment="Left"
                                     Margin="0,0,0,0"
                                     Text="{TemplateBinding Header}"
@@ -50,13 +49,13 @@
                             Classes="Void"
                             Click="GoBack"
                             HorizontalAlignment="Left"
-                            Padding="23,33"
+                            Padding="23,40"
                             VerticalAlignment="Top">
                             <PathIcon
                                 Data="{StaticResource arrow_left_regular}"
                                 Foreground="{DynamicResource SecondaryText}"
-                                Height="30"
-                                Width="30" />
+                                Height="20"
+                                Width="20" />
                         </Button>
 
 

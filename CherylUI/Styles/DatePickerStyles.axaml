@@ -1,0 +1,345 @@
+﻿<ResourceDictionary
+    xmlns="https://github.com/avaloniaui"
+    xmlns:controls="clr-namespace:CherylUI.Controls"
+    xmlns:system="clr-namespace:System;assembly=System.Runtime"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border
+            Height="700"
+            Padding="20"
+            Width="1000">
+            <StackPanel
+                HorizontalAlignment="Center"
+                Spacing="20"
+                VerticalAlignment="Center">
+                <DatePicker Height="60" />
+                <DatePicker CornerRadius="10" />
+                <DatePicker IsEnabled="False" />
+                <DatePicker>
+                    <DataValidationErrors.Error>
+                        <system:Exception>
+                            <x:Arguments>
+                                <x:String>Error</x:String>
+                            </x:Arguments>
+                        </system:Exception>
+                    </DataValidationErrors.Error>
+                </DatePicker>
+            </StackPanel>
+        </Border>
+    </Design.PreviewWith>
+
+    <x:Double x:Key="DatePickerFlyoutPresenterHighlightHeight">40</x:Double>
+    <x:Double x:Key="DatePickerFlyoutPresenterItemHeight">40</x:Double>
+    <x:Double x:Key="DatePickerFlyoutPresenterAcceptDismissHostGridHeight">41</x:Double>
+    <x:Double x:Key="DatePickerThemeMinWidth">296</x:Double>
+    <x:Double x:Key="DatePickerThemeMaxWidth">456</x:Double>
+    <Thickness x:Key="DatePickerFlyoutPresenterItemPadding">0,3,0,6</Thickness>
+    <Thickness x:Key="DatePickerFlyoutPresenterMonthPadding">9,3,0,6</Thickness>
+    <Thickness x:Key="DatePickerHostPadding">0,3,0,6</Thickness>
+    <Thickness x:Key="DatePickerHostMonthPadding">9,3,0,6</Thickness>
+    <x:Double x:Key="DatePickerSpacerThemeWidth">1</x:Double>
+
+
+
+    <ControlTheme TargetType="DatePicker" x:Key="{x:Type DatePicker}">
+        <Setter Property="FontSize" Value="{DynamicResource FontSizeNormal}" />
+        <Setter Property="Foreground" Value="{DynamicResource ThemeForegroundBrush}" />
+        <Setter Property="Background" Value="{DynamicResource ThemeBackgroundBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource ThemeControlHighlightMidBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <DataValidationErrors>
+                    <Grid Margin="0,0,0,0" Name="LayoutRoot">
+
+                        <Button
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Classes="Void"
+                            IsEnabled="{TemplateBinding IsEnabled}"
+                            Name="PART_FlyoutButton"
+                            TemplatedControl.IsTemplateFocusTarget="True">
+                            <Grid ColumnDefinitions="Auto,Auto">
+                                <Grid
+                                    ColumnDefinitions="78*,Auto,132*,Auto,78*"
+                                    Grid.Column="0"
+                                    Name="PART_ButtonContentGrid"
+                                    VerticalAlignment="Center">
+                                    <TextBlock
+                                        Classes="Secondary"
+                                        HorizontalAlignment="Center"
+                                        Name="PART_DayTextBlock"
+                                        Padding="0,0,0,0"
+                                        Text="day"
+                                        VerticalAlignment="Center" />
+                                    <TextBlock
+                                        Classes="Secondary"
+                                        Name="PART_MonthTextBlock"
+                                        Padding="5,0,0,0"
+                                        Text="month"
+                                        TextAlignment="Left"
+                                        VerticalAlignment="Center" />
+                                    <TextBlock
+                                        Classes="Secondary"
+                                        HorizontalAlignment="Center"
+                                        Margin="8,1,0,0"
+                                        Name="PART_YearTextBlock"
+                                        Padding="0,0,0,0"
+                                        Text="year"
+                                        VerticalAlignment="Center" />
+                                    <Rectangle
+                                        Fill="{DynamicResource DatePickerSpacerFill}"
+                                        Grid.Column="1"
+                                        HorizontalAlignment="Center"
+                                        Width="1"
+                                        x:Name="PART_FirstSpacer" />
+                                    <Rectangle
+                                        Fill="{DynamicResource DatePickerSpacerFill}"
+                                        Grid.Column="3"
+                                        HorizontalAlignment="Center"
+                                        Width="1"
+                                        x:Name="PART_SecondSpacer" />
+                                </Grid>
+
+
+                            </Grid>
+                        </Button>
+
+                        <Popup
+                            Height="750"
+                            IsLightDismissEnabled="True"
+                            Name="PART_Popup"
+                            Placement="Center"
+                            PlacementTarget="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
+                            WindowManagerAddShadowHint="False">
+                            <DatePickerPresenter Name="PART_PickerPresenter" />
+                        </Popup>
+
+                    </Grid>
+                </DataValidationErrors>
+            </ControlTemplate>
+        </Setter>
+
+        <Style Selector="^:disabled /template/ Rectangle">
+            <Setter Property="Opacity" Value="{DynamicResource ThemeDisabledOpacity}" />
+        </Style>
+
+        <!--  Changes foreground for watermark text when SelectedDate is null  -->
+        <Style Selector="^:hasnodate /template/ Button#PART_FlyoutButton TextBlock">
+            <Setter Property="Foreground" Value="{DynamicResource ThemeForegroundLowBrush}" />
+        </Style>
+    </ControlTheme>
+
+    <!--  WinUI: DatePickerFlyoutPresenter  -->
+    <ControlTheme TargetType="DatePickerPresenter" x:Key="{x:Type DatePickerPresenter}">
+        <Setter Property="Width" Value="396" />
+        <Setter Property="MinWidth" Value="296" />
+        <Setter Property="MaxHeight" Value="418" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="FontSize" Value="{DynamicResource FontSizeNormal}" />
+        <Setter Property="Background" Value="{DynamicResource ThemeBackgroundBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderMidBrush}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource DateTimeFlyoutBorderThickness}" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border
+                    BoxShadow="0 0 8 0 #55555555"
+                    Classes="Card"
+                    Margin="0,5"
+                    MaxHeight="290"
+                    MaxWidth="360"
+                    Name="Background"
+                    Padding="{DynamicResource DateTimeFlyoutBorderPadding}">
+                    <Grid Name="ContentRoot" RowDefinitions="*,Auto">
+                        <Grid Margin="0,5,0,15" Name="PART_PickerContainer">
+                            <Grid.Styles>
+                                <Style Selector="DateTimePickerPanel &gt; ListBoxItem">
+                                    <Setter Property="Background" Value="Transparent" />
+                                    <Setter Property="Padding" Value="4,2" />
+                                    <Setter Property="Template">
+                                        <ControlTemplate>
+                                            <Border
+                                                CornerRadius="6"
+                                                Margin="0,0,10,0"
+                                                Padding="8,4">
+
+                                                <ContentPresenter
+                                                    Background="Transparent"
+                                                    BorderBrush="Transparent"
+                                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                                    Content="{TemplateBinding Content}"
+                                                    ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                    CornerRadius="{TemplateBinding CornerRadius}"
+                                                    HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                    Margin="0,0,0,0"
+                                                    Name="PART_ContentPresentern"
+                                                    Padding="{TemplateBinding Padding}"
+                                                    VerticalAlignment="Center"
+                                                    VerticalContentAlignment="Center" />
+
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter>
+                                </Style>
+
+                                <Style Selector="ListBoxItem:selected TextBlock">
+                                    <Setter Property="Foreground" Value="{DynamicResource Accent}" />
+                                    <Setter Property="FontWeight" Value="Bold" />
+                                </Style>
+                            </Grid.Styles>
+                            <!--  Column Definitions set in code, ignore here  -->
+                            <Panel Name="PART_MonthHost">
+                                <ScrollViewer
+                                    HorizontalScrollBarVisibility="Disabled"
+                                    Margin="5,0"
+                                    VerticalScrollBarVisibility="Hidden">
+                                    <DateTimePickerPanel
+                                        ItemHeight="{DynamicResource DatePickerFlyoutPresenterItemHeight}"
+                                        Name="PART_MonthSelector"
+                                        PanelType="Month"
+                                        ShouldLoop="True" />
+                                </ScrollViewer>
+
+                            </Panel>
+                            <Panel Name="PART_DayHost">
+                                <ScrollViewer
+                                    HorizontalScrollBarVisibility="Disabled"
+                                    Margin="5,0"
+                                    VerticalScrollBarVisibility="Hidden">
+                                    <DateTimePickerPanel
+                                        ItemHeight="{DynamicResource DatePickerFlyoutPresenterItemHeight}"
+                                        Name="PART_DaySelector"
+                                        PanelType="Day"
+                                        ShouldLoop="True" />
+                                </ScrollViewer>
+                            </Panel>
+                            <Panel Name="PART_YearHost">
+                                <ScrollViewer
+                                    HorizontalScrollBarVisibility="Disabled"
+                                    Margin="5,0"
+                                    VerticalScrollBarVisibility="Hidden">
+                                    <DateTimePickerPanel
+                                        ItemHeight="{DynamicResource DatePickerFlyoutPresenterItemHeight}"
+                                        Name="PART_YearSelector"
+                                        PanelType="Year"
+                                        ShouldLoop="False" />
+                                </ScrollViewer>
+                            </Panel>
+                            <Border
+                                Background="Transparent"
+                                BorderBrush="{DynamicResource ComponentBackground}"
+                                BorderThickness="0,1,0,1"
+                                CornerRadius="0"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="5"
+                                Height="{DynamicResource DatePickerFlyoutPresenterHighlightHeight}"
+                                IsHitTestVisible="False"
+                                Margin="15,0"
+                                VerticalAlignment="Center"
+                                ZIndex="1" />
+
+                            <Border
+                                Background="{DynamicResource CardBackground}"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="5"
+                                Height="{DynamicResource DatePickerFlyoutPresenterHighlightHeight}"
+                                IsHitTestVisible="False"
+                                Margin="15,82,0,0"
+                                Opacity="0.4"
+                                VerticalAlignment="Center"
+                                ZIndex="1" />
+
+                            <Border
+                                Background="{DynamicResource CardBackground}"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="5"
+                                Height="{DynamicResource DatePickerFlyoutPresenterHighlightHeight}"
+                                IsHitTestVisible="False"
+                                Margin="15,162,0,0"
+                                Opacity="0.7"
+                                VerticalAlignment="Center"
+                                ZIndex="1" />
+
+                            <Border
+                                Background="{DynamicResource CardBackground}"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="5"
+                                Height="{DynamicResource DatePickerFlyoutPresenterHighlightHeight}"
+                                IsHitTestVisible="False"
+                                Margin="15,0,0,82"
+                                Opacity="0.4"
+                                VerticalAlignment="Center"
+                                ZIndex="1" />
+
+                            <Border
+                                Background="{DynamicResource CardBackground}"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="5"
+                                Height="{DynamicResource DatePickerFlyoutPresenterHighlightHeight}"
+                                IsHitTestVisible="False"
+                                Margin="15,0,0,162"
+                                Opacity="0.7"
+                                VerticalAlignment="Center"
+                                ZIndex="1" />
+                            <Rectangle
+                                Fill="Transparent"
+                                Grid.Column="1"
+                                HorizontalAlignment="Center"
+                                Margin="0,25"
+                                Name="PART_FirstSpacer"
+                                Width="1" />
+                            <Rectangle
+                                Fill="Transparent"
+                                Grid.Column="3"
+                                HorizontalAlignment="Center"
+                                Margin="0,25"
+                                Name="PART_SecondSpacer"
+                                Width="1" />
+                        </Grid>
+
+                        <Grid
+                            ColumnDefinitions="*,Auto,*"
+                            Grid.Row="1"
+                            Name="AcceptDismissGrid"
+                            VerticalAlignment="Bottom">
+                            <Button
+                                Classes="Text"
+                                HorizontalAlignment="Center"
+                                Name="PART_DismissButton"
+                                VerticalAlignment="Center">
+                                <TextBlock FontWeight="DemiBold" Text="Cancel" />
+                            </Button>
+                            <Border
+                                Background="{DynamicResource ComponentBackground}"
+                                Grid.Column="1"
+                                Margin="0,17"
+                                Width="1" />
+                            <Button
+                                Classes="Text"
+                                Grid.Column="2"
+                                HorizontalAlignment="Center"
+                                Name="PART_AcceptButton"
+                                VerticalAlignment="Center">
+
+                                <StackPanel Orientation="Horizontal">
+
+                                    <TextBlock
+                                        FontWeight="Bold"
+                                        Margin="0,0,0,0"
+                                        Text="Apply" />
+                                </StackPanel>
+                            </Button>
+
+                        </Grid>
+                    </Grid>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+
+
+    </ControlTheme>
+
+</ResourceDictionary>

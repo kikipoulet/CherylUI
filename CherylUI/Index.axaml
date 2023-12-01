@@ -11,10 +11,10 @@
             <ResourceDictionary.MergedDictionaries>
 
                 <ResourceInclude Source="Icons.axaml" />
-
+                <ResourceInclude Source="Styles/DatePickerStyles.axaml" />
             </ResourceDictionary.MergedDictionaries>
 
-            <FontFamily x:Key="HarmonyFont">avares://CherylUI/CustomFont#Nunito</FontFamily>
+            <FontFamily x:Key="HarmonyFont">avares://CherylUI/CustomFont#Quicksand</FontFamily>
         </ResourceDictionary>
     </Styles.Resources>
     <SimpleTheme />

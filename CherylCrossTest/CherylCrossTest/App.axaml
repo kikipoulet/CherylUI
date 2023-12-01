@@ -8,5 +8,7 @@
 
     <Application.Styles>
         <StyleInclude Source="avares://CherylUI/Index.axaml" />
+
     </Application.Styles>
+    <Application.Resources />
 </Application>

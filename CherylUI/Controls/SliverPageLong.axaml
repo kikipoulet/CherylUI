@@ -1,0 +1,79 @@
+﻿<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="CherylUI.Controls.SliverPageLong"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:controls="clr-namespace:CherylUI.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Styles>
+        <Style Selector="controls|SliverPageLong">
+            <Setter Property="Template">
+                <ControlTemplate>
+
+                    <Grid Background="{DynamicResource Background}">
+                        <Grid.Resources>
+                            <controls:OffsetToHeightConverterLong x:Key="HeightConverter" />
+                            <controls:OffsetToOpacityConverterLong x:Key="OpacityConverter" />
+                            <controls:OffsetToInvertOpacityConverterLong x:Key="OpacityInvertConverter" />
+                        </Grid.Resources>
+
+                        <ScrollViewer
+                            IsScrollInertiaEnabled="True"
+                            Margin="0,100,0,0"
+                            Name="scrollView"
+                            VerticalScrollBarVisibility="Hidden">
+                            <StackPanel>
+                                <Grid Height="237" />
+                                <ContentControl Content="{TemplateBinding Content}" Margin="13,0" />
+                            </StackPanel>
+                        </ScrollViewer>
+
+                        <Border
+                            Background="{DynamicResource Background}"
+                            BorderThickness="0,0,0,0"
+                            Height="{Binding #scrollView.Offset, Converter={StaticResource HeightConverter}}"
+                            VerticalAlignment="Top">
+
+                            <Grid>
+                                <TextBlock
+                                    FontSize="45"
+                                    HorizontalAlignment="Center"
+                                    Margin="0,0,0,0"
+                                    Opacity="{Binding #scrollView.Offset, Converter={StaticResource OpacityConverter}}"
+                                    Text="{TemplateBinding Header}"
+                                    VerticalAlignment="Center" />
+
+
+
+                                <TextBlock
+                                    FontSize="25"
+                                    HorizontalAlignment="Left"
+                                    Margin="72,0,0,32"
+                                    Opacity="{Binding #scrollView.Offset, Converter={StaticResource OpacityInvertConverter}}"
+                                    Text="{TemplateBinding Header}"
+                                    VerticalAlignment="Bottom" />
+                                <Button
+                                    Classes="Void"
+                                    Click="GoBack"
+                                    HorizontalAlignment="Left"
+                                    Padding="29,33"
+                                    VerticalAlignment="Bottom">
+                                    <PathIcon
+                                        Data="{StaticResource arrow_left_regular}"
+                                        Foreground="{DynamicResource SecondaryText}"
+                                        Height="20"
+                                        Width="20" />
+                                </Button>
+                            </Grid>
+                        </Border>
+
+                    </Grid>
+
+                </ControlTemplate>
+            </Setter>
+        </Style>
+    </UserControl.Styles>
+</UserControl>

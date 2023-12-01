@@ -6,6 +6,7 @@
     xmlns="https://github.com/avaloniaui"
     xmlns:controls="clr-namespace:CherylUI.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:glassmorphism="clr-namespace:CherylUI.Glassmorphism"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <UserControl.Styles>
@@ -13,6 +14,17 @@
             <Setter Property="Template">
                 <ControlTemplate>
                     <Grid>
+
+
+                        <Image
+                            IsVisible="{DynamicResource IsDark}"
+                            Source="/Assets/gradient_dark_strong.png"
+                            Stretch="UniformToFill" />
+                        <Image
+                            IsVisible="{DynamicResource IsLight}"
+                            Source="/Assets/gradient_light.png"
+                            Stretch="UniformToFill" />
+
                         <Border Name="BorderContent">
                             <Border.Transitions>
                                 <Transitions>
@@ -25,8 +37,8 @@
                             </controls:MobileNavigation>
                         </Border>
                         <Border
-                            Background="{DynamicResource Background}"
-                            BorderBrush="{DynamicResource SukiControlBorderBrush}"
+                            Background="{DynamicResource DialogBackground}"
+                            BorderBrush="{DynamicResource ComponentBackground}"
                             BoxShadow="0 4 12 0 #55555555 "
                             CornerRadius="30"
                             HorizontalAlignment="Center"
@@ -48,7 +60,7 @@
                                     </ThicknessTransition>
                                 </Transitions>
                             </Border.Transitions>
-                            <ContentControl Content="{TemplateBinding ToastContent}" />
+                            <ContentControl Content="{TemplateBinding ToastContent}" Margin="15,7" />
                         </Border>
 
 

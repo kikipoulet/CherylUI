@@ -1,4 +1,5 @@
 ﻿using Avalonia.Controls;
+using CherylCrossTest.Views;
 using CherylUI.Controls;
 using ReactiveUI;
 
@@ -16,5 +17,10 @@ public class MainViewModel : ReactiveObject
     public void LaunchToast()
     {
         InteractiveContainer.ShowToast(new TextBlock(){Text = "Hit !"},3);
+    }
+
+    public void LaunchDialog()
+    {
+        InteractiveContainer.ShowDialog(new DialogContent());
     }
 }

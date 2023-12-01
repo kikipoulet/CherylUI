@@ -4,6 +4,7 @@
     mc:Ignorable="d"
     x:Class="CherylCrossTest.Views.MenuControl"
     xmlns="https://github.com/avaloniaui"
+    xmlns:cherylCrossTest="clr-namespace:CherylCrossTest"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
@@ -16,23 +17,33 @@
                         <TextBlock Classes="Tab" Text="Tab 1" />
                     </StackPanel>
                 </TabItem.Header>
-                <StackPanel
-                    HorizontalAlignment="Center"
-                    Spacing="20"
-                    VerticalAlignment="Center">
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 
-                    <Button Click="GoToSettings">
-                        <TextBlock Text="Settings Page" />
-                    </Button>
+                    <StackPanel
+                        HorizontalAlignment="Center"
+                        Margin="50"
+                        Spacing="20"
+                        VerticalAlignment="Center">
 
-                    <Button Click="GoToAlarm">
-                        <TextBlock Text="Alarm Page" />
-                    </Button>
+                        <Button Click="GoToSettings">
+                            <TextBlock Text="Settings Page" />
+                        </Button>
 
-                    <Button Click="GoToLoginPage">
-                        <TextBlock Text="Login Page" />
-                    </Button>
-                </StackPanel>
+                        <Button Click="GoToAlarm">
+                            <TextBlock Text="Alarm Page" />
+                        </Button>
+
+                        <Button Click="GoToLoginPage">
+                            <TextBlock Text="Login Page" />
+                        </Button>
+
+                        <Border
+                            Classes="Card"
+                            Height="20"
+                            Width="20" />
+                    </StackPanel>
+                </Grid>
+
             </TabItem>
             <TabItem>
                 <TabItem.Header>

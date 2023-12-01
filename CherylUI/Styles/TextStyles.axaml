@@ -7,13 +7,13 @@
 
     <Style Selector="TextBlock">
         <Setter Property="FontFamily" Value="{StaticResource HarmonyFont}" />
-        <Setter Property="FontSize" Value="17" />
+        <Setter Property="FontSize" Value="16" />
         <Setter Property="Foreground" Value="{DynamicResource PrimaryText}" />
         <Setter Property="FontWeight" Value="Medium" />
     </Style>
 
     <Style Selector="TextBlock.Secondary">
-        <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontSize" Value="14" />
         <Setter Property="Foreground" Value="{DynamicResource SecondaryText}" />
     </Style>
 

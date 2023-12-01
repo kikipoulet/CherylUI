@@ -22,7 +22,7 @@
                         HorizontalContentAlignment="Stretch"
                         Margin="-4,-2"
                         Padding="0">
-                        <Grid Height="52" HorizontalAlignment="Stretch">
+                        <Grid Height="47" HorizontalAlignment="Stretch">
                             <PathIcon
                                 Data="{StaticResource chevron_right_regular}"
                                 Foreground="{DynamicResource SecondaryText}"
@@ -31,6 +31,7 @@
                                 VerticalAlignment="Center"
                                 Width="13" />
                             <TextBlock
+                                FontSize="16"
                                 FontWeight="DemiBold"
                                 Foreground="{DynamicResource Foreground}"
                                 HorizontalAlignment="Left"

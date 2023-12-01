@@ -107,7 +107,7 @@
         <Setter Property="Foreground" Value="{DynamicResource ContraryForeground}" />
         <Setter Property="FontSize" Value="18" />
         <Setter Property="Margin" Value="0,1,0,0" />
-        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontWeight" Value="SemiBold" />
     </Style>
 
     <Style Selector="Button.Small TextBlock">

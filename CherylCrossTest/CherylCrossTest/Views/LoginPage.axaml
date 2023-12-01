@@ -6,14 +6,12 @@
     xmlns="https://github.com/avaloniaui"
     xmlns:controls="clr-namespace:CherylUI.Controls;assembly=CherylUI"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:glassMorphism="clr-namespace:CherylUI.Controls.GlassMorphism;assembly=CherylUI"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <controls:SliverPage Header="Log in">
         <Grid Margin="0,170,0,0" VerticalAlignment="Center">
-            <Border
-                Classes="Card"
-                Margin="14,0"
-                VerticalAlignment="Center">
+            <glassMorphism:GlassCard Margin="14,0" VerticalAlignment="Center">
 
                 <StackPanel Margin="15,15,15,0">
                     <TextBlock
@@ -33,7 +31,7 @@
                     </Button>
                 </StackPanel>
 
-            </Border>
+            </glassMorphism:GlassCard>
         </Grid>
     </controls:SliverPage>
 

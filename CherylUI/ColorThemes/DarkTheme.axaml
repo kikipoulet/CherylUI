@@ -1,9 +1,13 @@
-﻿<ResourceDictionary xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<ResourceDictionary
+    xmlns="https://github.com/avaloniaui"
+    xmlns:system="clr-namespace:System;assembly=System.Runtime"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Color x:Key="Foreground">#fafbfc</Color>
     <Color x:Key="ContraryForeground">#e5e5e5</Color>
-    <Color x:Key="CardBackground">#1d1f21</Color>
+    <Color x:Key="CardBackground">#252729</Color>
+    <Color x:Key="GlassBorderBrush">#252729</Color>
     <Color x:Key="DialogBackground">#252729</Color>
-    <Color x:Key="Background">#252729</Color>
+    <Color x:Key="Background">Transparent</Color>
     <Color x:Key="GridDialogBackground">#55ffffff</Color>
 
 
@@ -18,5 +22,10 @@
 
     <Color x:Key="PrimaryText">#e7ffffff</Color>
     <Color x:Key="SecondaryText">#aeffffff</Color>
+
+    <system:Boolean x:Key="IsDark">True</system:Boolean>
+    <system:Boolean x:Key="IsLight">False</system:Boolean>
+
+
 
 </ResourceDictionary>

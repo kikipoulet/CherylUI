@@ -77,7 +77,7 @@
 
 
                         <Border
-                            Background="{DynamicResource CardBackground}"
+                            Background="Transparent"
                             BorderThickness="0"
                             CornerRadius="50"
                             Grid.Row="1"

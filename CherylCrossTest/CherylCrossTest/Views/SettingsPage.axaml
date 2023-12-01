@@ -20,7 +20,7 @@
         <viewModels:MainViewModel />
     </UserControl.DataContext>
 
-    <controls:SliverPage Header="Settings">
+    <controls:SliverPageLong Header="Settings">
         <StackPanel>
 
 
@@ -28,7 +28,7 @@
 
             <controls:GroupBox Header="Brightness">
                 <StackPanel>
-                    <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,20">
+                    <Grid ColumnDefinitions="Auto,*,Auto" Margin="-5,20,0,20">
                         <PathIcon
                             Data="{StaticResource weather_sunny_regular}"
                             Foreground="{DynamicResource SecondaryText}"
@@ -124,11 +124,30 @@
 
                     <cherylUi:HorizontalSeparator />
 
-                    <formFields:FormFieldAction Command="{Binding LaunchToast}" Title="WallPaper" />
+                    <formFields:FormFieldAction Command="{Binding LaunchDialog}" Title="WallPaper" />
 
                     <cherylUi:HorizontalSeparator />
 
                     <formFields:FormFieldSwitch IsChecked="{Binding Description}" Title="Show Informations" />
+
+                    <cherylUi:HorizontalSeparator />
+
+                    <Grid Height="47" HorizontalAlignment="Stretch">
+                        <DatePicker
+                            HorizontalAlignment="Right"
+                            Margin="0,0,-25,0"
+                            VerticalAlignment="Center" />
+                        <TextBlock
+                            FontSize="16"
+                            FontWeight="DemiBold"
+                            Foreground="{DynamicResource Foreground}"
+                            HorizontalAlignment="Left"
+                            Text="Date"
+                            VerticalAlignment="Center" />
+
+
+
+                    </Grid>
 
                     <cherylUi:HorizontalSeparator />
 
@@ -211,7 +230,9 @@
                 <TextBlock Text="Go To login" />
             </Button>
 
+
+
         </StackPanel>
-    </controls:SliverPage>
+    </controls:SliverPageLong>
 
 </UserControl>
