@@ -20,7 +20,7 @@ Yes it is.
 Currently working on adding glassmorphism :
 
 
-<img src="https://github.com/kikipoulet/CherylUI/assets/19242427/c070cde7-1438-4a71-8f08-0f86893925c1" width="500">
+<img src="https://github.com/kikipoulet/CherylUI/assets/19242427/2bc501b1-63ca-49af-a1a8-40bf3a35b874" width="500">
 
  
 
