@@ -17,8 +17,9 @@ Yes it is.
 
 <br/>
 
-Currently working on adding glassmorphism :
+### 1.2 Release : Glassmorphism added
 
+- [GlassCard control available.](https://github.com/kikipoulet/CherylUI/wiki/2.-Controls#glass-card) 
 
 <img src="https://github.com/kikipoulet/CherylUI/assets/19242427/2bc501b1-63ca-49af-a1a8-40bf3a35b874" width="500">
 
@@ -26,7 +27,7 @@ Currently working on adding glassmorphism :
 
 <br/>
 
-### Controls Demo
+### Controls Demo (1.1 Release)
 
 https://github.com/kikipoulet/CherylUI/assets/19242427/6f2d42f8-6476-473f-8986-1b82750c0236
 
