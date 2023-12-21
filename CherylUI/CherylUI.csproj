@@ -9,6 +9,7 @@
         <Description>https://github.com/kikipoulet/CherylUI</Description>
         <PackageProjectUrl>https://github.com/kikipoulet/CherylUI</PackageProjectUrl>
         <RepositoryUrl>https://github.com/kikipoulet/CherylUI</RepositoryUrl>
+        <PackageVersion>1.2.0</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>

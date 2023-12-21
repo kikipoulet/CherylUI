@@ -20,8 +20,8 @@
     <Color x:Key="ListSeparator">#11dddddd</Color>
     <Color x:Key="TappingBackground">#19ffffff</Color>
 
-    <Color x:Key="PrimaryText">#e7ffffff</Color>
-    <Color x:Key="SecondaryText">#aeffffff</Color>
+    <Color x:Key="PrimaryText">#fdfdfd</Color>
+    <Color x:Key="SecondaryText">#c1ffffff</Color>
 
     <system:Boolean x:Key="IsDark">True</system:Boolean>
     <system:Boolean x:Key="IsLight">False</system:Boolean>
