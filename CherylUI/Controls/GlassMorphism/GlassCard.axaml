@@ -11,44 +11,42 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <UserControl.Styles>
         <Style Selector="glassMorphism|GlassCard">
-            <Setter Property="BorderBrush" Value="{DynamicResource GlassBorderBrush}" />
-            <Setter Property="Template">
-                <ControlTemplate>
-                    <Grid>
-
-                        <Border
-                            Background="Transparent"
-                            ClipToBounds="True"
-                            CornerRadius="{TemplateBinding CornerRadius}">
-
-                            <Grid>
-
-                                <Border
-                                    Background="#aaffffff"
-                                    CornerRadius="{TemplateBinding CornerRadius}"
-                                    IsVisible="{DynamicResource IsLight}"
-                                    Opacity="0.57" />
-
-                                <Border
-                                    Background="#3b3b3b"
-                                    CornerRadius="{TemplateBinding CornerRadius}"
-                                    IsVisible="{DynamicResource IsDark}"
-                                    Opacity="0.5" />
-
-                                <glassmorphism:BlurBackground />
-
-                                <ContentControl Content="{TemplateBinding Content}" Margin="10" />
-                            </Grid>
-                        </Border>
-                        <Border
-                            Background="Transparent"
+             <Setter Property="BorderBrush" Value="{DynamicResource GlassBorderBrush}" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Panel>
+                    <Border Name="PART_BorderCard"
+                            Background="{DynamicResource GlassCardBackground}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
+                            ClipToBounds="{TemplateBinding ClipToBounds}"
                             CornerRadius="{TemplateBinding CornerRadius}"
-                            IsHitTestVisible="False" />
-                    </Grid>
-                </ControlTemplate>
-            </Setter>
+                            Opacity="{DynamicResource GlassOpacity}">
+                        <Border.Transitions>
+                            <Transitions>
+                                <BrushTransition Property="Background" Duration="0:0:0.15" />
+                                <BrushTransition Property="BorderBrush" Duration="0:0:0.15" />
+                                <DoubleTransition Property="Opacity" Duration="0:0:0.15" />
+                            </Transitions>
+                        </Border.Transitions>
+                    </Border>
+                    <Border Name="PART_ClipBorder"
+                            Background="Transparent"
+                            BorderBrush="{DynamicResource PrimaryColor0}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            ClipToBounds="{TemplateBinding ClipToBounds}"
+                            CornerRadius="{TemplateBinding CornerRadius}">
+                        <Border.Transitions>
+                            <Transitions>
+                                <BrushTransition Property="BorderBrush" Duration="0:0:0.15" />
+                            </Transitions>
+                        </Border.Transitions>
+                        <ContentPresenter Margin="{TemplateBinding Padding}" Content="{TemplateBinding Content}" />
+                    </Border>
+                </Panel>
+            </ControlTemplate>
+        </Setter>
         </Style>
     </UserControl.Styles>
 </UserControl>

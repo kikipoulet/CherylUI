@@ -1,7 +1,9 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Controls.Primitives;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using Avalonia.Styling;
 using CherylUI.Controls;
 
 namespace CherylCrossTest.Views;
@@ -51,4 +53,14 @@ public partial class MenuControl : UserControl
     {
         MobileNavigation.Push(new LoginPage());
     }
+    private void ToggleButton_OnIsCheckedChanged(object? sender, RoutedEventArgs e)
+    {
+        var t = (ToggleButton)sender;
+        if(t.IsChecked == true)
+            Application.Current.RequestedThemeVariant = ThemeVariant.Dark;
+        else
+            Application.Current.RequestedThemeVariant = ThemeVariant.Light;
+
+    }
+    
 }

@@ -102,7 +102,7 @@
                             CornerRadius="50"
                             HorizontalAlignment="Center"
                             Name="SelectedBorder"
-                            Padding="20,0"
+                            Padding="0,0"
                             VerticalAlignment="Center">
 
                             <ContentPresenter

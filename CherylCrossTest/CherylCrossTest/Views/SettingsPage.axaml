@@ -27,8 +27,8 @@
 
 
             <controls:GroupBox Header="Brightness">
-                <StackPanel>
-                    <Grid ColumnDefinitions="Auto,*,Auto" Margin="-5,20,0,20">
+                <StackPanel Margin="10,8,10,2">
+                    <Grid ColumnDefinitions="Auto,*,Auto" >
                         <PathIcon
                             Data="{StaticResource weather_sunny_regular}"
                             Foreground="{DynamicResource SecondaryText}"
@@ -49,14 +49,14 @@
                             Value="50" />
                     </Grid>
 
-                    <formFields:FormFieldSwitch Title="Automatic" />
+                    <formFields:FormFieldSwitch Margin="0,15,0,0" Title="Automatic" />
 
                 </StackPanel>
             </controls:GroupBox>
 
             <controls:GroupBox Header="View mode">
-                <StackPanel>
-                    <formFields:FormFieldSwitch Title="Dark Mode" />
+                <StackPanel Margin="10,2">
+                    <formFields:FormFieldSwitch  Title="Dark Mode" />
 
                     <cherylUi:HorizontalSeparator />
 
@@ -90,7 +90,7 @@
 
 
             <controls:GroupBox Header="Text">
-                <StackPanel>
+                <StackPanel Margin="10,2">
                     <formFields:FormFieldPicker
                         DialogSubTitle="Text style of your system apps."
                         DialogTitle="Text Style"
@@ -115,7 +115,7 @@
             </controls:GroupBox>
 
             <controls:GroupBox Header="Lock screen">
-                <StackPanel>
+                <StackPanel Margin="10,2">
 
                     <formFields:FormFieldSwitch IsChecked="{Binding Description}" Title="Always on Display" />
                     <cherylUi:HorizontalSeparator />
@@ -221,15 +221,6 @@
             </RadioButton>
 
             <Border Height="50" />
-
-            <ToggleButton Classes="Switch" Click="ToggleButton_OnIsCheckedChanged" />
-
-            <Border Height="50" />
-
-            <Button Click="gotologin">
-                <TextBlock Text="Go To login" />
-            </Button>
-
 
 
         </StackPanel>

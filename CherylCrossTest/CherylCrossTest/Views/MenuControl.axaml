@@ -37,10 +37,7 @@
                             <TextBlock Text="Login Page" />
                         </Button>
 
-                        <Border
-                            Classes="Card"
-                            Height="20"
-                            Width="20" />
+                     
                     </StackPanel>
                 </Grid>
 
@@ -52,6 +49,7 @@
                         <TextBlock Classes="Tab" Text="Tab 2" />
                     </StackPanel>
                 </TabItem.Header>
+                <ToggleButton VerticalAlignment="Center" HorizontalAlignment="Center" Classes="Switch" Click="ToggleButton_OnIsCheckedChanged"></ToggleButton>
             </TabItem>
             <TabItem>
                 <TabItem.Header>

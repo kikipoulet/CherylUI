@@ -152,7 +152,7 @@
 
     <Style Selector="ToggleButton.Switch:checked /template/ Border#SwitchKnob2">
 
-        <Setter Property="BoxShadow" Value="0 0 0 0 White" />
+        
         <Setter Property="Canvas.Left" Value="30" />
 
     </Style>

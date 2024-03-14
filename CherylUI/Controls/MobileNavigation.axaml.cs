@@ -5,6 +5,7 @@ using Avalonia.Controls.Templates;
 using Avalonia.Markup.Xaml;
 using Avalonia.Threading;
 using Avalonia.VisualTree;
+using System;
 
 namespace CherylUI.Controls;
 
@@ -48,31 +49,34 @@ namespace CherylUI.Controls;
             ContentControl animateCT = (ContentControl) x.First(f => f.Name == "animateunder");
             ContentControl baseCT = (ContentControl) x.First(f => f.Name == "base");
 
-            
-            animateCT.IsHitTestVisible = false;
-            baseCT.IsHitTestVisible = false;
-            
-            animateCT.Content = page;
-            baseCT.Animate<double>(OpacityProperty,1,0, TimeSpan.FromMilliseconds(300));
-            animateCT.Animate<double>(OpacityProperty,0,1, TimeSpan.FromMilliseconds(300));
-            baseCT.Animate<Thickness>(MarginProperty,new Thickness(0,0,0,0),new Thickness(20,0,-20,0), TimeSpan.FromMilliseconds(300));
+        baseCT.IsHitTestVisible = true;
+        baseCT.Content = page;
 
-            Task.Run(() =>
+        /*
+        animateCT.IsHitTestVisible = false;
+        baseCT.IsHitTestVisible = false;
+
+        animateCT.Content = page;
+        baseCT.Animate<double>(OpacityProperty,1,0, TimeSpan.FromMilliseconds(300));
+        animateCT.Animate<double>(OpacityProperty,0,1, TimeSpan.FromMilliseconds(300));
+        baseCT.Animate<Thickness>(MarginProperty,new Thickness(0,0,0,0),new Thickness(20,0,-20,0), TimeSpan.FromMilliseconds(300));
+
+        Task.Run(() =>
+        {
+            Thread.Sleep(400);
+            Dispatcher.UIThread.Invoke(() =>
             {
-                Thread.Sleep(400);
-                Dispatcher.UIThread.Invoke(() =>
-                {
-                    animateCT.Content = new Grid();
-                    baseCT.Opacity = 1;
-                    baseCT.Margin = new Thickness(0);
-                    instance.Content = page;
-                    
-                 
-                    baseCT.IsHitTestVisible = true;
-                });
-            });
+                animateCT.Content = new Grid();
+                baseCT.Opacity = 1;
+                baseCT.Margin = new Thickness(0);
+                instance.Content = page;
 
-        }
+
+                baseCT.IsHitTestVisible = true;
+            });
+        });
+        */
+    }
         public Control CurrentPage;
 
         public static void Push(UserControl content,bool DisableComeBack = false)
@@ -96,27 +100,31 @@ namespace CherylUI.Controls;
             ContentControl animateCT = (ContentControl) x.First(f => f.Name == "animate");
             ContentControl baseCT = (ContentControl) x.First(f => f.Name == "base");
 
-            animateCT.IsHitTestVisible = false;
-            baseCT.IsHitTestVisible = false;
-            
-            animateCT.Content = m;
-            animateCT.Animate<double>(OpacityProperty,0,1, TimeSpan.FromMilliseconds(300));
-            baseCT.Animate<double>(OpacityProperty,1,0, TimeSpan.FromMilliseconds(200));
-            animateCT.Animate<Thickness>(MarginProperty,new Thickness(20,0,-20,0),new Thickness(0), TimeSpan.FromMilliseconds(300));
+        /////
+        baseCT.IsHitTestVisible = true;
+        baseCT.Content = content;
 
-            Task.Run(() =>
-            {
-                Thread.Sleep(400);
-                Dispatcher.UIThread.Invoke(() =>
-                {
-                    animateCT.Content = new Grid();
-                    instance.Content = m;
-                    baseCT.Opacity = 1;
-                    baseCT.IsHitTestVisible = true;
-                });
-            });
-            
-        }
+        /*   animateCT.IsHitTestVisible = false;
+           baseCT.IsHitTestVisible = false;
+
+           animateCT.Content = m;
+           animateCT.Animate<double>(OpacityProperty,0,1, TimeSpan.FromMilliseconds(300));
+           baseCT.Animate<double>(OpacityProperty,1,0, TimeSpan.FromMilliseconds(200));
+           animateCT.Animate<Thickness>(MarginProperty,new Thickness(20,0,-20,0),new Thickness(0), TimeSpan.FromMilliseconds(300));
+
+           Task.Run(() =>
+           {
+               Thread.Sleep(400);
+               Dispatcher.UIThread.Invoke(() =>
+               {
+                   animateCT.Content = new Grid();
+                   instance.Content = m;
+                   baseCT.Opacity = 1;
+                   baseCT.IsHitTestVisible = true;
+               });
+           }); */
+
+    }
 
       
 

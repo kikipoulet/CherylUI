@@ -11,7 +11,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <controls:SliverPage Header="Alarm">
-        <StackPanel Background="{DynamicResource Background}" Margin="13,20">
+        <StackPanel Margin="13,20">
             <Image
                 HorizontalAlignment="Center"
                 Margin="70,00,50,50"
@@ -22,7 +22,7 @@
                     <ToggleButton
                         Classes="Switch"
                         DockPanel.Dock="Right"
-                        IsChecked="True"
+                      IsChecked="True"
                         Margin="3"
                         VerticalAlignment="Center" />
                     <TextBlock
@@ -80,7 +80,7 @@
                     <ToggleButton
                         Classes="Switch"
                         DockPanel.Dock="Right"
-                        IsChecked="True"
+                      IsChecked="True"
                         Margin="3"
                         VerticalAlignment="Center" />
                     <TextBlock

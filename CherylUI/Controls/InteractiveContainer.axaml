@@ -8,7 +8,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:glassmorphism="clr-namespace:CherylUI.Glassmorphism"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:glassMorphism="clr-namespace:CherylUI.Controls.GlassMorphism">
     <UserControl.Styles>
         <Style Selector="controls|InteractiveContainer">
             <Setter Property="Template">
@@ -16,14 +17,7 @@
                     <Grid>
 
 
-                        <Image
-                            IsVisible="{DynamicResource IsDark}"
-                            Source="/Assets/gradient_dark_strong.png"
-                            Stretch="UniformToFill" />
-                        <Image
-                            IsVisible="{DynamicResource IsLight}"
-                            Source="/Assets/gradient_light.png"
-                            Stretch="UniformToFill" />
+                     <glassMorphism:CherylBackground />
 
                         <Border Name="BorderContent">
                             <Border.Transitions>
@@ -39,7 +33,7 @@
                         <Border
                             Background="{DynamicResource DialogBackground}"
                             BorderBrush="{DynamicResource ComponentBackground}"
-                            BoxShadow="0 4 12 0 #55555555 "
+                          
                             CornerRadius="30"
                             HorizontalAlignment="Center"
                             IsHitTestVisible="False"
@@ -132,7 +126,7 @@
 
         <Style Selector="controls|InteractiveContainer[IsDialogOpen=True] Border#BorderContent">
             <Setter Property="Opacity" Value="0.5" />
-            <Setter Property="Effect" Value="blur(5)" />
+          
         </Style>
 
         <Style Selector="controls|InteractiveContainer[IsDialogOpen=False] Grid#gridDialog">

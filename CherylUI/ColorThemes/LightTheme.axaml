@@ -25,5 +25,13 @@
 
     <system:Boolean x:Key="IsDark">False</system:Boolean>
     <system:Boolean x:Key="IsLight">True</system:Boolean>
+    
+    <system:Double x:Key="GlassOpacity">0.8</system:Double>
+    <system:Double x:Key="GlassOpacityDark">0.5</system:Double>
+    <system:Double x:Key="GlassOpacityLight">0.75</system:Double>
+    
+    <Color x:Key="GlassCardBackground">#aaffffff</Color>
+    <Color x:Key="GlassCardOpaqueBackground">#fcfcfc</Color>
+ 
 
 </ResourceDictionary>

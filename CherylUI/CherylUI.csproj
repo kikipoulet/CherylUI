@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>netstandard2.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -10,13 +10,15 @@
         <PackageProjectUrl>https://github.com/kikipoulet/CherylUI</PackageProjectUrl>
         <RepositoryUrl>https://github.com/kikipoulet/CherylUI</RepositoryUrl>
         <PackageVersion>1.2.0</PackageVersion>
+        <LangVersion>10</LangVersion>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Avalonia.Skia" Version="11.0.5" />
-      <PackageReference Include="Avalonia.Themes.Simple" Version="11.0.5" />
-      <PackageReference Include="ReactiveUI" Version="18.3.1" />
-      <PackageReference Include="SkiaSharp" Version="2.88.6" />
+      <PackageReference Include="Avalonia.Skia" Version="11.1.0-beta1" />
+      <PackageReference Include="Avalonia.Themes.Simple" Version="11.1.0-beta1" />
+      <PackageReference Include="ReactiveUI" Version="19.5.41" />
+      <PackageReference Include="SkiaSharp" Version="3.0.0-preview.2.1" />
     </ItemGroup>
 
     <ItemGroup>

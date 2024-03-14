@@ -146,7 +146,7 @@
         <Setter Property="Template">
             <ControlTemplate>
                 <Border
-                    BoxShadow="0 0 8 0 #55555555"
+                
                     Classes="Card"
                     Margin="0,5"
                     MaxHeight="290"
