@@ -78,7 +78,7 @@ public class FastNoiseBackgroundRenderer
     public void UpdateValues( ThemeVariant baseTheme)
     {
         _themeColor = new Color(255,10,89,247).ToUInt32();
-        _accentColor = new Color(250,61,14,149).ToUInt32();
+        _accentColor = new Color(255,89,0,255).ToUInt32();
         _baseColor = baseTheme == ThemeVariant.Light
             ? new Color(255, 241, 241, 241).ToUInt32()
             : GetBackgroundColor(new Color(255,10,89,247));
@@ -141,9 +141,9 @@ public class FastNoiseBackgroundRenderer
         var minValue = Math.Min(Math.Min(r, g), b);
         var maxValue = Math.Max(Math.Max(r, g), b);
 
-        r = (r == minValue) ? 30 : ((r == maxValue) ? 30 : 22);
-        g = (g == minValue) ? 30 : ((g == maxValue) ? 30 : 22);
-        b = (b == minValue) ? 30 : ((b == maxValue) ? 30 : 22);
+        r = (r == minValue) ? 37 : ((r == maxValue) ? 37 : 26);
+        g = (g == minValue) ? 37 : ((g == maxValue) ? 37 : 26);
+        b = (b == minValue) ? 37 : ((b == maxValue) ? 37 : 26);
         return ARGB(255, (byte)r, (byte)g, (byte)b);
     }
 
