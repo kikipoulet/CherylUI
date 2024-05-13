@@ -46,36 +46,11 @@ namespace CherylUI.Controls;
             instance.CurrentPage = page;
             
             var x = instance.GetTemplateChildren();
-            ContentControl animateCT = (ContentControl) x.First(f => f.Name == "animateunder");
-            ContentControl baseCT = (ContentControl) x.First(f => f.Name == "base");
+            TransitioningContentControl baseCT = (TransitioningContentControl) x.First(f => f.Name == "base");
+            
+            baseCT.Content = page;
 
-        baseCT.IsHitTestVisible = true;
-        baseCT.Content = page;
-
-        /*
-        animateCT.IsHitTestVisible = false;
-        baseCT.IsHitTestVisible = false;
-
-        animateCT.Content = page;
-        baseCT.Animate<double>(OpacityProperty,1,0, TimeSpan.FromMilliseconds(300));
-        animateCT.Animate<double>(OpacityProperty,0,1, TimeSpan.FromMilliseconds(300));
-        baseCT.Animate<Thickness>(MarginProperty,new Thickness(0,0,0,0),new Thickness(20,0,-20,0), TimeSpan.FromMilliseconds(300));
-
-        Task.Run(() =>
-        {
-            Thread.Sleep(400);
-            Dispatcher.UIThread.Invoke(() =>
-            {
-                animateCT.Content = new Grid();
-                baseCT.Opacity = 1;
-                baseCT.Margin = new Thickness(0);
-                instance.Content = page;
-
-
-                baseCT.IsHitTestVisible = true;
-            });
-        });
-        */
+      
     }
         public Control CurrentPage;
 
@@ -97,32 +72,12 @@ namespace CherylUI.Controls;
             
 
             var x = instance.GetTemplateChildren();
-            ContentControl animateCT = (ContentControl) x.First(f => f.Name == "animate");
-            ContentControl baseCT = (ContentControl) x.First(f => f.Name == "base");
+          
+            TransitioningContentControl baseCT = (TransitioningContentControl) x.First(f => f.Name == "base");
 
-        /////
-        baseCT.IsHitTestVisible = true;
-        baseCT.Content = content;
+            baseCT.Content = content;
 
-        /*   animateCT.IsHitTestVisible = false;
-           baseCT.IsHitTestVisible = false;
-
-           animateCT.Content = m;
-           animateCT.Animate<double>(OpacityProperty,0,1, TimeSpan.FromMilliseconds(300));
-           baseCT.Animate<double>(OpacityProperty,1,0, TimeSpan.FromMilliseconds(200));
-           animateCT.Animate<Thickness>(MarginProperty,new Thickness(20,0,-20,0),new Thickness(0), TimeSpan.FromMilliseconds(300));
-
-           Task.Run(() =>
-           {
-               Thread.Sleep(400);
-               Dispatcher.UIThread.Invoke(() =>
-               {
-                   animateCT.Content = new Grid();
-                   instance.Content = m;
-                   baseCT.Opacity = 1;
-                   baseCT.IsHitTestVisible = true;
-               });
-           }); */
+       
 
     }
 

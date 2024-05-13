@@ -16,9 +16,8 @@
             <Setter Property="Template">
                 <ControlTemplate>
                     <Grid>
-                        <ContentControl IsHitTestVisible="False" Name="animateunder" />
-                        <ContentControl Content="{TemplateBinding Content}" Name="base" />
-                        <ContentControl IsHitTestVisible="False" Name="animate" />
+                        <TransitioningContentControl Content="{TemplateBinding Content}" Name="base" />
+                
                     </Grid>
                 </ControlTemplate>
             </Setter>

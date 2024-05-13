@@ -34,6 +34,7 @@
         <Setter Property="Foreground" Value="{DynamicResource Accent}" />
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="CornerRadius" Value="5" />
         <Setter Property="BorderThickness" Value="0.5" />
         <Setter Property="Padding" Value="4,0,0,0" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
@@ -45,7 +46,7 @@
                         Background="{TemplateBinding Background}"
                         BorderBrush="{DynamicResource ComponentBackground}"
                         BorderThickness="2"
-                        CornerRadius="5"
+                        CornerRadius="{TemplateBinding CornerRadius}"
                         Height="26"
                         Name="border"
                         VerticalAlignment="Center"

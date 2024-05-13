@@ -45,7 +45,7 @@
         <Setter Property="Template">
             <ControlTemplate>
                 <glassMorphism:GlassCard
-                    CornerRadius="12"
+                    CornerRadius="15"
                     Name="GlobalBorder"
                     Padding="15,12">
                     <glassMorphism:GlassCard.Transitions>
@@ -54,62 +54,7 @@
                         </Transitions>
                     </glassMorphism:GlassCard.Transitions>
                     <Grid ColumnDefinitions="*,Auto" Margin="0,2,0,0">
-                        <Ellipse
-                            Grid.Column="1"
-                            Height="26"
-                            HorizontalAlignment="Right"
-                            Name="border"
-                            Stroke="{TemplateBinding BorderBrush}"
-                            StrokeThickness="5"
-                            VerticalAlignment="Top"
-                            Width="26">
-                            <Ellipse.Transitions>
-                                <Transitions>
-                                    <BrushTransition Duration="0:0:0.15" Property="Fill" />
-                                    <DoubleTransition Duration="0:0:0.15" Property="Width" />
-                                    <DoubleTransition Duration="0:0:0.15" Property="Height" />
-                                </Transitions>
-                            </Ellipse.Transitions>
-                        </Ellipse>
-                        <Ellipse
-                            Grid.Column="1"
-                            Height="22"
-                            HorizontalAlignment="Right"
-                            Margin="0,2,2,0"
-                            Name="checkMark"
-                            Stretch="Uniform"
-                            UseLayoutRounding="False"
-                            VerticalAlignment="Top"
-                            Width="22">
-                            <Ellipse.Transitions>
-                                <Transitions>
-                                    <BrushTransition Duration="0:0:0.25" Property="Fill" />
-                                    <DoubleTransition Duration="0:0:0.2" Property="Width" />
-                                    <DoubleTransition Duration="0:0:0.2" Property="Height" />
-                                    <ThicknessTransition Duration="0:0:0.20" Property="Margin" />
-                                </Transitions>
-                            </Ellipse.Transitions>
-                        </Ellipse>
-                        <Ellipse
-                            Fill="{DynamicResource GlassBorderBrush}"
-                            Grid.Column="1"
-                            Height="10"
-                            HorizontalAlignment="Right"
-                            Margin="0,0,0,0"
-                            Name="indeterminateMark"
-                            Stretch="Uniform"
-                            UseLayoutRounding="False"
-                            VerticalAlignment="Top"
-                            Width="10">
-                            <Ellipse.Transitions>
-                                <Transitions>
-                                    <BrushTransition Duration="0:0:0.25" Property="Fill" />
-                                    <DoubleTransition Duration="0:0:0.25" Property="Width" />
-                                    <DoubleTransition Duration="0:0:0.25" Property="Height" />
-                                    <ThicknessTransition Duration="0:0:0.25" Property="Margin" />
-                                </Transitions>
-                            </Ellipse.Transitions>
-                        </Ellipse>
+                        <CheckBox CornerRadius="50" VerticalAlignment="Top" Margin="0" IsHitTestVisible="False" Grid.Column="1"></CheckBox>
                         <ContentPresenter
                             Content="{TemplateBinding Content}"
                             ContentTemplate="{TemplateBinding ContentTemplate}"
@@ -126,31 +71,12 @@
     </Style>
 
 
-    <Style Selector="RadioButton:pointerover /template/ Ellipse#border">
-        <Setter Property="Stroke" Value="{DynamicResource ComponentBackground}" />
-    </Style>
-    <Style Selector="RadioButton /template/ Ellipse#checkMark">
-        <Setter Property="Fill" Value="{DynamicResource GlassBorderBrush}" />
-        <Setter Property="Width" Value="12" />
-        <Setter Property="Height" Value="12" />
-        <Setter Property="IsVisible" Value="True" />
 
+    <Style Selector="RadioButton:checked /template/ CheckBox">
+        <Setter Property="IsChecked" Value="True" />
+     
     </Style>
-
-    <Style Selector="RadioButton /template/ Ellipse#border">
-        <Setter Property="Fill" Value="{DynamicResource Accent}" />
-    </Style>
-    <Style Selector="RadioButton:checked /template/ Ellipse#checkMark">
-        <Setter Property="Fill" Value="{DynamicResource GlassBorderBrush}" />
-        <Setter Property="Width" Value="12" />
-        <Setter Property="Height" Value="12" />
-        <Setter Property="Margin" Value="0,7,7,0" />
-    </Style>
-    <Style Selector="RadioButton:checked /template/ Ellipse#border">
-        <Setter Property="StrokeThickness" Value="3" />
-
-    </Style>
-
+ 
     <Style Selector="RadioButton TextBlock">
         <Setter Property="FontSize" Value="15" />
         <Setter Property="FontWeight" Value="DemiBold" />
@@ -161,15 +87,6 @@
         <Setter Property="BorderThickness" Value="1.5" />
     </Style>
 
-    <Style Selector="RadioButton /template/ Ellipse#indeterminateMark">
-        <Setter Property="IsVisible" Value="False" />
-    </Style>
-
-    <Style Selector="RadioButton:indeterminate /template/ Ellipse#indeterminateMark">
-        <Setter Property="IsVisible" Value="True" />
-    </Style>
-    <Style Selector="RadioButton:disabled /template/ Ellipse#border">
-        <Setter Property="Opacity" Value="{DynamicResource ThemeDisabledOpacity}" />
-    </Style>
+  
 
 </Styles>
