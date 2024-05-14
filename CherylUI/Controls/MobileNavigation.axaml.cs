@@ -56,6 +56,7 @@ namespace CherylUI.Controls;
 
         public static void Push(UserControl content,bool DisableComeBack = false)
         {
+            
             var instance = GetMobileStackInstance();
 
             if(instance.CurrentPage == null)
@@ -76,8 +77,7 @@ namespace CherylUI.Controls;
             TransitioningContentControl baseCT = (TransitioningContentControl) x.First(f => f.Name == "base");
 
             baseCT.Content = content;
-
-       
+            
 
     }
 

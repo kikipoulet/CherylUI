@@ -23,7 +23,7 @@
                     Width="200">
 
 
-                    <RadioButton>
+                    <RadioButton Height="80">
                         <TextBlock Text="Option 1" />
                     </RadioButton>
                     <RadioButton>
@@ -54,7 +54,7 @@
                         </Transitions>
                     </glassMorphism:GlassCard.Transitions>
                     <Grid ColumnDefinitions="*,Auto" Margin="0,2,0,0">
-                        <CheckBox CornerRadius="50" VerticalAlignment="Top" Margin="0" IsHitTestVisible="False" Grid.Column="1"></CheckBox>
+                        <CheckBox VerticalAlignment="Top" Margin="0" IsHitTestVisible="False" Grid.Column="1"></CheckBox>
                         <ContentPresenter
                             Content="{TemplateBinding Content}"
                             ContentTemplate="{TemplateBinding ContentTemplate}"
@@ -83,8 +83,9 @@
     </Style>
 
     <Style Selector="RadioButton:checked /template/ glassMorphism|GlassCard#GlobalBorder">
+        <Setter Property="Padding" Value="14,11"></Setter>
         <Setter Property="BorderBrush" Value="{DynamicResource Accent}" />
-        <Setter Property="BorderThickness" Value="1.5" />
+        <Setter Property="BorderThickness" Value="2" />
     </Style>
 
   

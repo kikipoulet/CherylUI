@@ -4,8 +4,8 @@
     <Design.PreviewWith>
         <Grid
             Background="{DynamicResource Background}"
-            Height="2400"
-            Width="1080">
+            Height="400"
+            Width="280">
 
             <Border Classes="Card">
                 <StackPanel

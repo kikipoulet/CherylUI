@@ -2,15 +2,15 @@
     <Design.PreviewWith>
         <Grid
             Background="{DynamicResource Background}"
-            Height="2400"
-            Width="1080">
+            Height="240"
+            Width="100">
 
 
             <Border
                 Classes="Card"
                 HorizontalAlignment="Center"
-                Margin="50"
-                Padding="40,50"
+                Margin="0"
+            
                 VerticalAlignment="Center">
                 <StackPanel
                     HorizontalAlignment="Center"
@@ -34,7 +34,7 @@
         <Setter Property="Foreground" Value="{DynamicResource Accent}" />
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderBrush" Value="Transparent" />
-        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="CornerRadius" Value="6" />
         <Setter Property="BorderThickness" Value="0.5" />
         <Setter Property="Padding" Value="4,0,0,0" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
