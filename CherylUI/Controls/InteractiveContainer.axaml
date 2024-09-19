@@ -26,8 +26,15 @@
 
                                 </Transitions>
                             </Border.Transitions>
-                            <controls:MobileNavigation>
-                                <ContentControl Content="{TemplateBinding Content}" />
+                            <controls:MobileNavigation Name="MB"  >
+                                <controls:MobileNavigation.Transitions>
+                                    <Transitions>
+                                        <EffectTransition Property="Effect" Duration="0:0:0.25"></EffectTransition>
+                                    </Transitions>
+                                </controls:MobileNavigation.Transitions>
+                                
+                                    <ContentControl Content="{TemplateBinding Content}" />
+                                
                             </controls:MobileNavigation>
                         </Border>
                         <Border
@@ -78,7 +85,7 @@
                             IsHitTestVisible="False"
                             Name="borderDialog"
                             Opacity="0"
-                            Padding="10"
+                            Padding="15"
                             VerticalAlignment="Center">
 
                             <Border.Transitions>
@@ -116,6 +123,10 @@
         <Style Selector="controls|InteractiveContainer[IsToastOpen=False] Border#ToastBorder">
             <Setter Property="Opacity" Value="0" />
             <Setter Property="Margin" Value="0,125,0,0" />
+        </Style>
+        
+        <Style Selector="controls|InteractiveContainer[IsDialogOpen=True] controls|MobileNavigation#MB">
+            <Setter Property="Effect" Value="blur(20)" />
         </Style>
 
         <Style Selector="controls|InteractiveContainer[IsDialogOpen=True] Grid#gridDialog">

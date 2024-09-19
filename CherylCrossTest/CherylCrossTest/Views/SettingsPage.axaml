@@ -220,7 +220,7 @@
                 </StackPanel>
             </RadioButton>
 
-            <Border Height="50" />
+            <Border Height="120" />
 
 
         </StackPanel>

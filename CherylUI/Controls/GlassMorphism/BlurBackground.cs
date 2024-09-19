@@ -99,7 +99,7 @@ namespace CherylUI.Glassmorphism;
                 using var blurred = SKSurface.Create(lease.GrContext, false, new SKImageInfo(
                     (int)Math.Ceiling(_bounds.Width),
                     (int)Math.Ceiling(_bounds.Height), SKImageInfo.PlatformColorType, SKAlphaType.Premul));
-                using(var filter = SKImageFilter.CreateBlur(6, 6, SKShaderTileMode.Clamp))
+                using(var filter = SKImageFilter.CreateBlur(15, 15, SKShaderTileMode.Clamp))
                 using (var blurPaint = new SKPaint
                        {
                            Shader = backdropShader,

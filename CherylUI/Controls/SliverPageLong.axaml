@@ -7,7 +7,8 @@
     xmlns:controls="clr-namespace:CherylUI.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:glassmorphism="clr-namespace:CherylUI.Glassmorphism">
     <UserControl.Styles>
         <Style Selector="controls|SliverPageLong">
             <Setter Property="Template">
@@ -22,23 +23,26 @@
 
                         <ScrollViewer
                             IsScrollInertiaEnabled="True"
-                            Margin="0,100,0,0"
+                            Margin="0,0,0,0"
                             Name="scrollView"
                             VerticalScrollBarVisibility="Hidden">
                             <StackPanel>
-                                <Grid Height="237" />
+                                <Grid Height="337" />
                                 <ContentControl Content="{TemplateBinding Content}" Margin="13,0" />
                             </StackPanel>
                         </ScrollViewer>
 
                         <Border
-                            Background="{DynamicResource Background}"
+                      
                             BorderThickness="0,0,0,0"
                             Height="{Binding #scrollView.Offset, Converter={StaticResource HeightConverter}}"
                             VerticalAlignment="Top">
 
                             <Grid>
-                                <TextBlock
+                              <Border ClipToBounds="True">
+                                <glassmorphism:BlurBackground Margin="-30" />
+                              </Border>
+                              <TextBlock
                                     FontSize="45"
                                     HorizontalAlignment="Center"
                                     Margin="0,0,0,0"

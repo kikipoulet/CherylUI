@@ -10,7 +10,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <controls:SliverPage Header="Alarm">
+    <controls:SliverPage  Header="Alarm">
         <StackPanel Margin="13,20">
             <Image
                 HorizontalAlignment="Center"
@@ -103,6 +103,7 @@
                     </StackPanel>
                 </DockPanel>
             </glassMorphism:GlassCard>
+            <Border Height="100"></Border>
         </StackPanel>
     </controls:SliverPage>
 

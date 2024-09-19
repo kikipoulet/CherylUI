@@ -1,6 +1,8 @@
-﻿using Avalonia.Media;
+﻿using Avalonia;
+using Avalonia.Media;
 using Avalonia.Media.Imaging;
 using Avalonia.Styling;
+using Avalonia.Threading;
 
 namespace CherylUI.Controls.GlassMorphism;
 
@@ -15,7 +17,7 @@ public readonly struct FastNoiseRendererOptions
 
     public FastNoiseRendererOptions(
         FastNoiseLite.NoiseType type,
-        float noiseScale = 1.5f,
+        float noiseScale = 2f,
         float xAnimSpeed = 2f,
         float yAnimSpeed = 1f,
         float primaryAlpha = 0.7f,
@@ -80,8 +82,8 @@ public class FastNoiseBackgroundRenderer
         _themeColor = new Color(255,10,89,247).ToUInt32();
         _accentColor = new Color(255,89,0,255).ToUInt32();
         _baseColor = baseTheme == ThemeVariant.Light
-            ? new Color(255, 241, 241, 241).ToUInt32()
-            : GetBackgroundColor(new Color(255,10,89,247));
+            ? new Color(255, 245, 245, 245).ToUInt32()
+            : new Color(255, 0,0,0).ToUInt32();
 
         _pOffsetX = Rand.Next(1000);
         _pOffsetY = Rand.Next(1000);
@@ -92,6 +94,15 @@ public class FastNoiseBackgroundRenderer
 
     public async Task Render(WriteableBitmap bitmap)
     {
+        float accalpha = 0;
+        float noisescale = 0;
+
+        Dispatcher.UIThread.Invoke(() =>
+        {
+            accalpha = Application.Current.ActualThemeVariant == ThemeVariant.Light ? _accentAlpha : 0.21f;
+            noisescale = Application.Current.ActualThemeVariant == ThemeVariant.Light ? _scale : 0.86f * 100;
+        });
+        
         _pOffsetX += _xAnim;
         _pOffsetY += _yAnim;
         _aOffsetX -= _xAnim;
@@ -104,7 +115,7 @@ public class FastNoiseBackgroundRenderer
         {
             using var frameBuffer = bitmap.Lock();
             var frameSize = frameBuffer.Size;
-            var frameScale = (1f / frameSize.Height) * _scale;
+            var frameScale = (1f / frameSize.Height) * noisescale;
             unsafe
             {
                 var backBuffer = (uint*)frameBuffer.Address.ToPointer();
@@ -121,7 +132,7 @@ public class FastNoiseBackgroundRenderer
                         var firstLayer = BlendPixelOverlay(WithAlpha(_themeColor, alpha), _baseColor);
 
                         noise = NoiseGen.GetNoise((_aOffsetX + x) * frameScale, (_aOffsetY + scanline) * frameScale);
-                        noise = (noise + 1f) / 2f * _accentAlpha;
+                        noise = (noise + 1f) / 2f * (accalpha);
                         alpha = (byte)(noise * 255);
 
                         dest[x] = BlendPixel(WithAlpha(_accentColor, alpha), firstLayer);

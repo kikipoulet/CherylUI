@@ -8,7 +8,7 @@
     <Color x:Key="GlassBorderBrush">#252729</Color>
     <Color x:Key="DialogBackground">#252729</Color>
     <Color x:Key="Background">Transparent</Color>
-    <Color x:Key="GridDialogBackground">#55ffffff</Color>
+    <Color x:Key="GridDialogBackground">#77ffffff</Color>
 
 
     <Color x:Key="Accent">#317AF7</Color>
@@ -26,11 +26,11 @@
     <system:Boolean x:Key="IsDark">True</system:Boolean>
     <system:Boolean x:Key="IsLight">False</system:Boolean>
 
-    <system:Double x:Key="GlassOpacity">0.45</system:Double>
+    <system:Double x:Key="GlassOpacity">0.3</system:Double>
     <system:Double x:Key="GlassOpacityDark">0.45</system:Double>
     <system:Double x:Key="GlassOpacityLight">0.57</system:Double>
     
-    <Color x:Key="GlassCardBackground">#353535</Color>
+    <Color x:Key="GlassCardBackground">#656565</Color>
     <Color x:Key="GlassCardOpaqueBackground">#222222</Color>
 
 </ResourceDictionary>

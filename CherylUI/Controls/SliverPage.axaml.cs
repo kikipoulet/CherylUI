@@ -27,6 +27,15 @@ namespace CherylUI.Controls;
             get { return GetValue(HeaderProperty); }
             set { SetValue(HeaderProperty, value ); }
         }
+        
+        public static readonly StyledProperty<bool> IsBackVisibleProperty =
+            AvaloniaProperty.Register<SliverPage, bool>(nameof(IsBackVisible), defaultValue: false);
+
+        public bool IsBackVisible
+        {
+            get { return GetValue(IsBackVisibleProperty); }
+            set { SetValue(IsBackVisibleProperty, value ); }
+        }
 
         private void GoBack(object? sender, RoutedEventArgs e)
         {
@@ -71,8 +80,13 @@ namespace CherylUI.Controls;
 
             if (offset > 70)
                 offset = 70;
+            
+            
 
-            return new Thickness(25 + (offset * 1), 75 - offset, 0 , -10 + (offset / 7));
+            if(parameter == (object?)true)
+                return new Thickness(25 + (offset * 1), 75 - offset, 0 , -10 + (offset / 7));
+            else
+                return new Thickness(25 , 75 - offset, 0 , -10 + (offset / 7));
 
         }
 

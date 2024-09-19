@@ -7,65 +7,46 @@
     xmlns:cherylCrossTest="clr-namespace:CherylCrossTest"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:views="clr-namespace:CherylCrossTest.Views">
     <Grid Background="{DynamicResource Background}">
         <TabControl>
             <TabItem>
                 <TabItem.Header>
                     <StackPanel>
-                        <PathIcon Classes="Tab" Data="{StaticResource weather_sunny_regular}" />
-                        <TextBlock Classes="Tab" Text="Tab 1" />
-                    </StackPanel>
-                </TabItem.Header>
-                <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-
-                    <StackPanel
-                        HorizontalAlignment="Center"
-                        Margin="50"
-                        Spacing="20"
-                        VerticalAlignment="Center">
-
-                        <Button Click="GoToSettings">
-                            <TextBlock Text="Settings Page" />
-                        </Button>
-
-                        <Button Click="GoToAlarm">
-                            <TextBlock Text="Alarm Page" />
-                        </Button>
-
-                        <Button Click="GoToLoginPage">
-                            <TextBlock Text="Login Page" />
-                        </Button>
-
-                     
-                    </StackPanel>
-                </Grid>
-
-            </TabItem>
-            <TabItem>
-                <TabItem.Header>
-                    <StackPanel>
-                        <PathIcon Classes="Tab" Data="{StaticResource weather_sunny_regular}" />
-                        <TextBlock Classes="Tab" Text="Tab 2" />
+                        <PathIcon Classes="Tab" Data="{StaticResource home_regular}" />
+                        <TextBlock Classes="Tab" Text="Home" />
                     </StackPanel>
                 </TabItem.Header>
                 <ToggleButton VerticalAlignment="Center" HorizontalAlignment="Center" Classes="Switch" Click="ToggleButton_OnIsCheckedChanged"></ToggleButton>
+
             </TabItem>
             <TabItem>
                 <TabItem.Header>
                     <StackPanel>
-                        <PathIcon Classes="Tab" Data="{StaticResource weather_sunny_regular}" />
-                        <TextBlock Classes="Tab" Text="Tab 3" />
+                        <PathIcon Classes="Tab" Data="{StaticResource person_regular}" />
+                        <TextBlock Classes="Tab" Text="Profile" />
                     </StackPanel>
                 </TabItem.Header>
+                <views:LoginPage></views:LoginPage>
             </TabItem>
             <TabItem>
                 <TabItem.Header>
                     <StackPanel>
-                        <PathIcon Classes="Tab" Data="{StaticResource weather_sunny_regular}" />
-                        <TextBlock Classes="Tab" Text="Tab 4" />
+                        <PathIcon Classes="Tab" Data="{StaticResource clock_alarm_regular}" />
+                        <TextBlock Classes="Tab" Text="Alarm" />
                     </StackPanel>
                 </TabItem.Header>
+                <views:ClockPage></views:ClockPage>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel>
+                        <PathIcon Classes="Tab" Data="{StaticResource settings_regular}" />
+                        <TextBlock Classes="Tab" Text="Settings" />
+                    </StackPanel>
+                </TabItem.Header>
+                <views:SettingsPage />
             </TabItem>
         </TabControl>
 

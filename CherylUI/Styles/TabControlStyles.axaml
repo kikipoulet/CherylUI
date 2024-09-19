@@ -1,4 +1,5 @@
-﻿<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:glassmorphism="clr-namespace:CherylUI.Glassmorphism">
 
     <Design.PreviewWith>
         <Grid
@@ -48,7 +49,7 @@
     </Design.PreviewWith>
 
     <Style Selector="TabControl">
-        <Setter Property="TabStripPlacement" Value="Bottom" />
+       <Setter Property="TabStripPlacement" Value="Bottom" />
         <Setter Property="Template">
             <ControlTemplate>
                 <Border
@@ -58,14 +59,9 @@
                     CornerRadius="{TemplateBinding CornerRadius}"
                     HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
                     VerticalAlignment="{TemplateBinding VerticalAlignment}">
-                    <DockPanel>
-                        <ItemsPresenter DockPanel.Dock="{TemplateBinding TabStripPlacement}" Name="PART_ItemsPresenter">
-                            <ItemsPresenter.ItemsPanel>
-                                <ItemsPanelTemplate>
-                                    <UniformGrid Columns="{Binding Items}" Rows="1" />
-                                </ItemsPanelTemplate>
-                            </ItemsPresenter.ItemsPanel>
-                        </ItemsPresenter>
+                   
+                    <Panel>
+                       
                         <ContentPresenter
                             Content="{TemplateBinding SelectedContent}"
                             ContentTemplate="{TemplateBinding SelectedContentTemplate}"
@@ -73,7 +69,26 @@
                             Margin="{TemplateBinding Padding}"
                             Name="PART_SelectedContentHost"
                             VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
-                    </DockPanel>
+                        
+                        <Border BorderBrush="{DynamicResource Separator}" BorderThickness="0,1,0,0" VerticalAlignment="Bottom" >
+                        <Panel >
+                            
+                            <Border Opacity="0.25" IsVisible="{DynamicResource IsDark}" Background="Black"></Border>
+                            <Border Opacity="0.25" IsVisible="{DynamicResource IsLight}" Background="White"></Border>
+                          <Border ClipToBounds="True">
+                            <glassmorphism:BlurBackground Margin="-30" />
+                          </Border>
+                            <ItemsPresenter  Name="PART_ItemsPresenter">
+                                <ItemsPresenter.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <UniformGrid Columns="{Binding Items}" Rows="1" />
+                                    </ItemsPanelTemplate>
+                                </ItemsPresenter.ItemsPanel>
+                            </ItemsPresenter>
+                        </Panel>
+                            </Border>
+                    </Panel>
+                
                 </Border>
             </ControlTemplate>
         </Setter>
