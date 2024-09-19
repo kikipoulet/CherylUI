@@ -20,10 +20,22 @@
 
 <br/>
 
-<img src="https://github.com/kikipoulet/CherylUI/assets/19242427/2bc501b1-63ca-49af-a1a8-40bf3a35b874" width="500">
+## About the Project
 
-### Demo
+This library is not currently under active development.
 
-https://github.com/kikipoulet/CherylUI/assets/19242427/e7659fd7-47d5-4141-bef8-2dc07754a1b9
+Interest in Avalonia for mobile development seems quite rare (much like my available time), and this project is an experimental exploration of the question: "What would a [SukiUI](https://github.com/kikipoulet/SukiUI) design look like for mobile?"
 
-Note : .net 8 Avalonia 11.1 performances are really better now
+Contributors who wish to make the library more robust or expand its capabilities are, of course, welcome.
+
+
+<br/>
+
+## 1.5 Release
+
+
+
+![151](https://github.com/user-attachments/assets/af48ca42-d49a-464b-bfda-2a748252d8b8)
+
+
+![152](https://github.com/user-attachments/assets/ee8792ae-f55d-4b62-88b5-c9aa3e487567)
