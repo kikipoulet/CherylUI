@@ -14,13 +14,6 @@ public partial class MainView : UserControl
     public MainView()
     {
         InitializeComponent();
-        
-    }
-
-    protected override void OnLoaded(RoutedEventArgs e)
-    {
-        MobileNavigation.Push(new MenuControl());
-        base.OnLoaded(e);
     }
     
    

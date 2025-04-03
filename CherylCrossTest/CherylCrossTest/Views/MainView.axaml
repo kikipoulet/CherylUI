@@ -16,8 +16,8 @@
     xmlns:vm="clr-namespace:CherylCrossTest.ViewModels"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <controls:InteractiveContainer>
-        <Grid />
-    </controls:InteractiveContainer>
+	<controls:InteractiveContainer>
+		<views:MenuControl></views:MenuControl>
+	</controls:InteractiveContainer>
 
 </UserControl>

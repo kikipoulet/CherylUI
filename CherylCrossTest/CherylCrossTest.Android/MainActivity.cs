@@ -1,10 +1,6 @@
-﻿using System.Linq;
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
 using Avalonia.Android;
-using Avalonia.Controls.ApplicationLifetimes;
-using Avalonia.VisualTree;
-using CherylUI.Controls;
 
 namespace CherylCrossTest.Android;
 
@@ -12,12 +8,4 @@ namespace CherylCrossTest.Android;
     MainLauncher = true, ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize | ConfigChanges.UiMode)]
 public class MainActivity : AvaloniaMainActivity<App>
 {
-    public override void OnBackPressed()
-    {
-
-        MobileNavigation navControl = ((ISingleViewApplicationLifetime)CherylCrossTest.App.Current.ApplicationLifetime).MainView.GetVisualDescendants().OfType<MobileNavigation>().First();
-
-        navControl.PopPage();
-
-    }
 }

@@ -83,9 +83,9 @@ namespace CherylUI.Controls;
 
       
 
-        Stack<Control> Pages = new Stack<Control>();
+        public Stack<Control> Pages = new Stack<Control>();
         
-        private static MobileNavigation GetMobileStackInstance()
+        public static MobileNavigation GetMobileStackInstance()
         {
             MobileNavigation container = null;
             try
