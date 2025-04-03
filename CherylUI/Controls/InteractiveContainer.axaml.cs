@@ -12,6 +12,25 @@ public partial class InteractiveContainer : UserControl
     public InteractiveContainer()
     {
         InitializeComponent();
+        this.Loaded += InteractiveContainer_Loaded;
+    }
+
+    private void InteractiveContainer_Loaded(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        TopLevel? T = TopLevel.GetTopLevel(this);
+        if (TopLevel.GetTopLevel(this) is { } toplevel)
+        {
+            toplevel.BackRequested += T_BackRequested;
+        }
+    }
+
+    private void T_BackRequested(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        MobileNavigation mobileNavigation = MobileNavigation.GetMobileStackInstance();
+        if (mobileNavigation.Pages.Count == 0) //if page count is 0 let default back button behaviour happen
+            return;
+        MobileNavigation.Pop();
+        e.Handled = true;
     }
 
     private void InitializeComponent()
